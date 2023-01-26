@@ -7,12 +7,12 @@
 ## کتابخانه بازار بورس اوراق بهادار تهران
 
 ### Introduction
-This library developed for fetch all data from [tsetmc.com](http://www.tsetmc.com/) as Tehran Securities Exchange Technology Management Co. It's free and open-source and developed in visual studio C# library.
+This library developed for fetch all data from [tsetmc.com](http://www.tsetmc.com/) as Tehran Securities Exchange Technology Management Co. It's free and open-source and developed in visual studio C# library. we using [HtmlAgilityPack](https://html-agility-pack.net/) and [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) as library helper.
 
 ### How to Use
 you have two option for use the library:
 1. Get the project and build it by youself.
-2. Download <span style="color:orange;">*Tse.dll*</span> in Relase page and reference it in your project
+2. Download [*Tse.dll*](https://github.com/AFP33/TSE/releases) in Relase page and reference it in your project
 
 ### Features List
 
