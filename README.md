@@ -1,5 +1,7 @@
 # Tehran Securities Exchange (TSE) Library
 
+![love](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)
+[![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/chetanraj/awesome-github-badges)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://github.com/AFP33/TSE/blob/master/LICENSE)
 
 ## کتابخانه بازار بورس اوراق بهادار تهران
