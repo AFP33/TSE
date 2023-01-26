@@ -14,16 +14,16 @@ namespace Tse.Entities
         /// <summary>
         /// تاریخ
         /// </summary>
-        public string Date { get; set; }
+        public string Date { get; internal set; }
 
         /// <summary>
         /// زمان
         /// </summary>
-        public string Time { get; set; }
+        public string Time { get; internal set; }
 
         /// <summary>
         /// وضعیت جدید
         /// </summary>
-        public string Status { get; set; }
+        public string Status { get; internal set; }
     }
 }

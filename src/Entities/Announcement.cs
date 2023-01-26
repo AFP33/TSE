@@ -16,22 +16,22 @@ namespace Tse.Entities
         /// <summary>
         /// عنوان
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; internal set; }
 
         /// <summary>
         /// تاریخ
         /// </summary>
-        public string Date { get; set; }
+        public string Date { get; internal set; }
 
         /// <summary>
         /// لینک دانلود
         /// </summary>
-        public string DownloadLink { get; set; }
+        public string DownloadLink { get; internal set; }
 
         /// <summary>
         /// الصاق ها
         /// </summary>
-        public List<Attachment> Attachments { get; set; }
+        public List<Attachment> Attachments { get; internal set; }
     }
 
     /// <summary>

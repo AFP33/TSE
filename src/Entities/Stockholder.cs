@@ -14,21 +14,21 @@ namespace Tse.Entities
         /// <summary>
         /// سهامدار / دارنده
         /// </summary>
-        public string Holder { get; set; }
+        public string Holder { get; internal set; }
 
         /// <summary>
         /// سهم
         /// </summary>
-        public string Share { get; set; }
+        public string Share { get; internal set; }
 
         /// <summary>
         /// درصد
         /// </summary>
-        public string Percent { get; set; }
+        public string Percent { get; internal set; }
 
         /// <summary>
         /// تغییر
         /// </summary>
-        public string Status { get; set; }
+        public string Status { get; internal set; }
     }
 }

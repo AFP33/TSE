@@ -13,51 +13,51 @@ namespace Tse.Entities
         /// <summary>
         /// وضعیت بازار
         /// </summary>
-        public string MarketStatus { get; set; }
+        public string MarketStatus { get; internal set; }
 
         /// <summary>
         /// شاخص کل
         /// </summary>
-        public string OverallIndex { get; set; }
+        public string OverallIndex { get; internal set; }
 
         /// <summary>
         /// ارزش بازار اول و دوم
         /// </summary>
-        public string Market1_2Value { get; set; }
+        public string Market1_2Value { get; internal set; }
 
         /// <summary>
         /// ارزش بازار پایه
         /// </summary>
-        public string BaseMarketValue { get; set; }
+        public string BaseMarketValue { get; internal set; }
 
         /// <summary>
         /// اطلاعات قیمت
         /// </summary>
-        public string PriceInformation { get; set; }
+        public string PriceInformation { get; internal set; }
 
         /// <summary>
         /// تعداد معاملات
         /// </summary>
-        public string TransactionCount { get; set; }
+        public string TransactionCount { get; internal set; }
 
         /// <summary>
         /// ارزش معاملات
         /// </summary>
-        public string TransactionValue { get; set; }
+        public string TransactionValue { get; internal set; }
 
         /// <summary>
         /// حجم معاملات
         /// </summary>
-        public string TransactionVolume { get; set; }
+        public string TransactionVolume { get; internal set; }
 
         /// <summary>
         /// تاثیر در شاخص
         /// </summary>
-        public List<EffectiveOnIndex> EffectiveOnIndex { get; set; }
+        public List<EffectiveOnIndex> EffectiveOnIndex { get; internal set; }
 
         /// <summary>
         /// نماد های پرتراکنش
         /// </summary>
-        public List<TopTransactionSymbol> TopTransactionSymbol { get; set; }
+        public List<TopTransactionSymbol> TopTransactionSymbol { get; internal set; }
     }
 }

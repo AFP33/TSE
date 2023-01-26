@@ -16,42 +16,42 @@ namespace Tse.Entities
         /// <summary>
         /// عنوان
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; internal set; }
 
         /// <summary>
         /// نام گزارش
         /// </summary>
-        public string ReportName { get; set; }
+        public string ReportName { get; internal set; }
 
         /// <summary>
         /// تاریخ انتشار
         /// </summary>
-        public string PublishDate { get; set; }
+        public string PublishDate { get; internal set; }
 
         /// <summary>
         /// سال مالی
         /// </summary>
-        public string YearEndToDate { get; set; }
+        public string YearEndToDate { get; internal set; }
 
         /// <summary>
         /// دوره مالی
         /// </summary>
-        public string PeriodEndToDate { get; set; }
+        public string PeriodEndToDate { get; internal set; }
 
         /// <summary>
         /// اطلاعات
         /// </summary>
-        public List<List<string>> Data { get; set; }
+        public List<List<string>> Data { get; internal set; }
 
         /// <summary>
         /// دوره زمانی
         /// </summary>
-        public string Period { get; set; }
+        public string Period { get; internal set; }
 
         /// <summary>
         /// وضعیت
         /// </summary>
-        public BalanceSheetStatus Status { get; set; }
+        public BalanceSheetStatus Status { get; internal set; }
 
     }
 

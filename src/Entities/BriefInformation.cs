@@ -14,47 +14,47 @@ namespace Tse.Entities
         /// <summary>
         /// آخرین معامله
         /// </summary>
-        public string LastTransaction { get; set; }
+        public string LastTransaction { get; internal set; }
         
         /// <summary>
         /// قیمت پایانی
         /// </summary>
-        public string FinalPrice { get; set; }
+        public string FinalPrice { get; internal set; }
 
         /// <summary>
         /// اولین قیمت
         /// </summary>
-        public string FirstPrice { get; set; }
+        public string FirstPrice { get; internal set; }
 
         /// <summary>
         /// قیمت دیروز
         /// </summary>
-        public string YesterdayPrice { get; set; }
+        public string YesterdayPrice { get; internal set; }
 
         /// <summary>
         /// تعداد معاملات
         /// </summary>
-        public string TransactionCount { get; set; }
+        public string TransactionCount { get; internal set; }
 
         /// <summary>
         /// حجم معاملات
         /// </summary>
-        public string TransactionVolume { get; set; }
+        public string TransactionVolume { get; internal set; }
 
         /// <summary>
         /// ارزش معاملات
         /// </summary>
-        public string TransactionValue { get; set; }
+        public string TransactionValue { get; internal set; }
 
         /// <summary>
         /// ارزش بازار
         /// </summary>
-        public string MarketValue { get; set; }
+        public string MarketValue { get; internal set; }
 
         /// <summary>
         /// بازه روز
         /// </summary>
-        public Range TodayRange { get; set; }
+        public Range TodayRange { get; internal set; }
     }
 
     public class Range

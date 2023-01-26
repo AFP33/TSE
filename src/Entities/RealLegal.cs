@@ -14,22 +14,22 @@ namespace Tse.Entities
         /// <summary>
         /// تاریخ معاملات
         /// </summary>
-        public string Date { get; set; }
+        public string Date { get; internal set; }
 
         /// <summary>
         /// معاملات خرید
         /// </summary>
-        public Buy Buyes { get; set; }
+        public Buy Buyes { get; internal set; }
 
         /// <summary>
         /// معاملات فروش
         /// </summary>
-        public Sell Sellers { get; set; }
+        public Sell Sellers { get; internal set; }
 
         /// <summary>
         /// تغییر مالکیت حقوقی به حقیقی
         /// </summary>
-        public string OwnershipLegalToReal { get; set; }
+        public string OwnershipLegalToReal { get; internal set; }
     }
 
     /// <summary>
@@ -40,12 +40,12 @@ namespace Tse.Entities
         /// <summary>
         /// خرید حقیقی
         /// </summary>
-        public Items Real { get; set; }
+        public Items Real { get; internal set; }
 
         /// <summary>
         /// خرید حقوقی
         /// </summary>
-        public Items Legal { get; set; }
+        public Items Legal { get; internal set; }
     }
 
     /// <summary>
@@ -56,12 +56,12 @@ namespace Tse.Entities
         /// <summary>
         /// فروش حقیقی
         /// </summary>
-        public Items Real { get; set; }
+        public Items Real { get; internal set; }
 
         /// <summary>
         /// فروش حقوقی
         /// </summary>
-        public Items Legal { get; set; }
+        public Items Legal { get; internal set; }
     }
 
     public class Items
@@ -69,21 +69,21 @@ namespace Tse.Entities
         /// <summary>
         /// تعداد معاملات
         /// </summary>
-        public string Count { get; set; }
+        public string Count { get; internal set; }
 
         /// <summary>
         /// حجم معاملات
         /// </summary>
-        public string Volume { get; set; }
+        public string Volume { get; internal set; }
 
         /// <summary>
         /// ارزش معاملات
         /// </summary>
-        public string Value { get; set; }
+        public string Value { get; internal set; }
 
         /// <summary>
         /// قیمت میانگین
         /// </summary>
-        public string AveragePrice { get; set; }
+        public string AveragePrice { get; internal set; }
     }
 }

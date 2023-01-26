@@ -16,32 +16,32 @@ namespace Tse.Entities
         /// <summary>
         /// عنوان
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; internal set; }
 
         /// <summary>
         /// تاریخ و زمان
         /// </summary>
-        public string DateTime { get; set; }
+        public string DateTime { get; internal set; }
 
         /// <summary>
         /// تاریخ جلسه
         /// </summary>
-        public string CouncilDate { get; set; }
+        public string CouncilDate { get; internal set; }
 
         /// <summary>
         /// تاریخ هیئت مدیره
         /// </summary>
-        public string BoardDirectorDate { get; set; }
+        public string BoardDirectorDate { get; internal set; }
 
         /// <summary>
         /// اعضاء
         /// </summary>
-        public IList<Member> Members { get; set; }
+        public IList<Member> Members { get; internal set; }
 
         /// <summary>
         /// مدیر عامل
         /// </summary>
-        public DirectorManager DirectorManager { get; set; }
+        public DirectorManager DirectorManager { get; internal set; }
     }
 
     /// <summary>

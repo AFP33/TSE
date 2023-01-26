@@ -16,22 +16,22 @@ namespace Tse.Entities
         /// <summary>
         /// عنوان مجمع
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; internal set; }
 
         /// <summary>
         /// زمان مجمع
         /// </summary>
-        public string Time { get; set; }
+        public string Time { get; internal set; }
 
         /// <summary>
         /// محل برگزاری
         /// </summary>
-        public MeetingLocation MeetingLocation { get; set; }
+        public MeetingLocation MeetingLocation { get; internal set; }
 
         /// <summary>
         /// دستورات جلسه
         /// </summary>
-        public List<string> AgendaItems { get; set; }
+        public List<string> AgendaItems { get; internal set; }
     }
 
     /// <summary>
@@ -42,16 +42,16 @@ namespace Tse.Entities
         /// <summary>
         /// تاریخ
         /// </summary>
-        public string Date { get; set; }
+        public string Date { get; internal set; }
 
         /// <summary>
         /// زمان
         /// </summary>
-        public string Time { get; set; }
+        public string Time { get; internal set; }
 
         /// <summary>
         /// آدرس
         /// </summary>
-        public string Address { get; set; }
+        public string Address { get; internal set; }
     }
 }

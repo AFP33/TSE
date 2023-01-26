@@ -14,16 +14,16 @@ namespace Tse.Entities
         /// <summary>
         /// عنوان
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; internal set; }
 
         /// <summary>
         /// زمان انتشار
         /// </summary>
-        public string Time { get; set; }
+        public string Time { get; internal set; }
 
         /// <summary>
         /// متن پیام
         /// </summary>
-        public string Message { get; set; }
+        public string Message { get; internal set; }
     }
 }

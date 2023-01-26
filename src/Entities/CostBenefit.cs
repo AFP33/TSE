@@ -16,41 +16,41 @@ namespace Tse.Entities
         /// <summary>
         /// عنوان
         /// </summary>
-        public string Title { get; set; }
+        public string Title { get; internal set; }
 
         /// <summary>
         /// تاریخ
         /// </summary>
-        public string Date { get; set; }
+        public string Date { get; internal set; }
 
         /// <summary>
         /// نام گزارش
         /// </summary>
-        public string ReportName { get; set; }
+        public string ReportName { get; internal set; }
 
         /// <summary>
         /// سال گزارش
         /// </summary>
-        public string YearEndToDate { get; set; }
+        public string YearEndToDate { get; internal set; }
 
         /// <summary>
         /// دوره گزارش
         /// </summary>
-        public string Period { get; set; }
+        public string Period { get; internal set; }
 
         /// <summary>
         /// وضعیت حسابرسی
         /// </summary>
-        public string IsAudited { get; set; }
+        public string IsAudited { get; internal set; }
 
         /// <summary>
         /// دوره مالی
         /// </summary>
-        public string PeriodEndToDate { get; set; }
+        public string PeriodEndToDate { get; internal set; }
 
         /// <summary>
         /// اطلاعات
         /// </summary>
-        public List<List<string>> Data { get; set; }
+        public List<List<string>> Data { get; internal set; }
     }
 }
