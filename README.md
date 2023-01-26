@@ -29,15 +29,15 @@ you have two option for use the library:
       </tr>
    </thead>
    <tbody>
-      <tr> <td>Bourse at Glance</td> <td>بورس اوراق بهادار تهران</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Farabourse at Glance</td> <td>فرابورس ایران</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Search Stock</td> <td>جستجوی سهام</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>All Stocks</td> <td>همه نمادهای مارکت</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Chosen Indexes</td> <td>شاخص های منتخب بورس</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Effective on Index</td> <td>تاثیر در شاخص بورس</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Effective on Index</td> <td>تاثیر در شاخص فرا بورس</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Top Transaction Symbol</td> <td>نماد های پر تراکنش بورس</td> <td>:heavy_check_mark:</td> </tr>
-      <tr> <td>Top Transaction Symbol</td> <td>نماد های پر تراکنش فرا بورس</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Bourse at Glance</td> <td>بورس اوراق بهادار تهران</td> <td>✔</td> </tr>
+      <tr> <td>Farabourse at Glance</td> <td>فرابورس ایران</td> <td>✔</td> </tr>
+      <tr> <td>Search Stock</td> <td>جستجوی سهام</td> <td>✔</td> </tr>
+      <tr> <td>All Stocks</td> <td>همه نمادهای مارکت</td> <td>✔</td> </tr>
+      <tr> <td>Chosen Indexes</td> <td>شاخص های منتخب بورس</td> <td>✔</td> </tr>
+      <tr> <td>Effective on Index</td> <td>تاثیر در شاخص بورس</td> <td>✔</td> </tr>
+      <tr> <td>Effective on Index</td> <td>تاثیر در شاخص فرا بورس</td> <td>✔</td> </tr>
+      <tr> <td>Top Transaction Symbol</td> <td>نماد های پر تراکنش بورس</td> <td>✔</td> </tr>
+      <tr> <td>Top Transaction Symbol</td> <td>نماد های پر تراکنش فرا بورس</td> <td>✔</td> </tr>
    </tbody>
 </table>
 
