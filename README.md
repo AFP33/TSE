@@ -11,6 +11,8 @@ This library developed for fetch all data from [tsetmc.com](http://www.tsetmc.co
 
 **The most important advantage of this library is not to store information and leave it to you.** Because of this you will get the highest data speed. The data serialization operation is developed in the simplest way to achieve fast response. Other parts are also planned for development which will be done in the future. Your suggestions can help us improve the project.
 
+This library gives you access to all the stocks available in the market, such as the stock exchange(بورس), Farabourse(فرابورس), base market(بازارهای پایه), bonds (اوراق) and etc..., and the features mentioned below can be used for all stocks in all different markets.
+
 ## 📝 Documentation 
 The full documentation access in [wiki](https://github.com/AFP33/TSE/wiki). hope it's useful.
 
