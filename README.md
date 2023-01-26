@@ -95,52 +95,52 @@ using Tse;
             // جستجوی سهام
             var stocks = marketHandler.FindStock("فخاس");
 
-            var stock = tse.GetStockHandler(stocks[0]);
+            var stockHandler = tse.GetStockHandler(stocks[0]);
             
             // دریافت سابقه معاملات - روزهای معامله شده
-            var th = stock.GetTransactionHistory();
+            var th = stockHandler.GetTransactionHistory();
 
             // دریافت سابقه معاملات -  همه روزها
-            var th2 = stock.GetTransactionHistory(Tse.Entities.TransactionHistoryType.AllDay);
+            var th2 = stockHandler.GetTransactionHistory(Tse.Entities.TransactionHistoryType.AllDay);
 
             // دریافت مجامع
-            var Announcements = stock.Announcements;
+            var Announcements = stockHandler.Announcements;
 
             // دریافت ترازنامه ها
-            var BalanceSheets = stock.BalanceSheets;
+            var BalanceSheets = stockHandler.BalanceSheets;
 
             // دریافت اطلاعات بخش هیئت مدیره
-            var BoardOfDirectors = stock.BoardOfDirectors;
+            var BoardOfDirectors = stockHandler.BoardOfDirectors;
 
             // دریافت اطلاعات اولیه نماد
-            var BriefInformations = stock.BriefInformations;
+            var BriefInformations = stockHandler.BriefInformations;
 
             // دریافت اطلاعات بخش شناسه نماد
-            var CompanyIdentities = stock.CompanyIdentities;
+            var CompanyIdentities = stockHandler.CompanyIdentities;
 
             // دریافت اطلاعات بخش معرفی شرکت
-            var CompanyInfos = stock.CompanyInfos;
+            var CompanyInfos = stockHandler.CompanyInfos;
 
             // دریافت اطلاعات بخش سود و زیان
-            var CostBenefits = stock.CostBenefits;
+            var CostBenefits = stockHandler.CostBenefits;
 
             // دریافت اطلاعات بخش آگهی مجمع
-            var CouncilAnnouncements = stock.CouncilAnnouncements;
+            var CouncilAnnouncements = stockHandler.CouncilAnnouncements;
 
             // دریافت اطلاعات بخش DPS
-            var dps = stock.DPSs;
+            var dps = stockHandler.DPSs;
 
             // دریافت اطلاعات بخش EPS
-            var eps = stock.EPSs;
+            var eps = stockHandler.EPSs;
 
             // دریافت اطلاعات بخش تغییر وضعیت
-            var StatusChanges = stock.StatusChanges;
+            var StatusChanges = stockHandler.StatusChanges;
 
             // دریافت اطلاعات بخش سهامداران
-            var Stockholders = stock.Stockholders;
+            var Stockholders = stockHandler.Stockholders;
 
             // دریافت اطلاعات بخش پیام های ناظر
-            var SupervisorMessages = stock.SupervisorMessages;
+            var SupervisorMessages = stockHandler.SupervisorMessages;
 
 ```
 
