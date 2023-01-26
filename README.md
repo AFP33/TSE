@@ -9,6 +9,8 @@
 ## 📌 Introduction
 This library developed for fetch all data from [tsetmc.com](http://www.tsetmc.com/) as Tehran Securities Exchange Technology Management Co. It's free and open-source and developed in visual studio C# library. we using [HtmlAgilityPack](https://html-agility-pack.net/) and [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) as library helper. As you probably know, for using this library you need to connect to internet, for accessing tsetmc site.
 
+**The most important advantage of this library is not to store information and leave it to you.** Because of this you will get the highest data speed. The data serialization operation is developed in the simplest way to achieve fast response. Other parts are also planned for development which will be done in the future. Your suggestions can help us improve the project.
+
 ## 📝 Documentation 
 The full documentation access in [wiki](https://github.com/AFP33/TSE/wiki). hope it's useful.
 
