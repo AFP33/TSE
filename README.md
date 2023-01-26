@@ -20,41 +20,59 @@ you have two option for use the library:
 ## 📌 Features List
 
 ### Market Feature List
-| Feature name  | tsetmc name | status |
-| ------------- | ------------- | ------------- |
-| Bourse at Glance  | بورس اوراق بهادار تهران  | :heavy_check_mark: |
-| Farabourse at Glance  | فرابورس ایران  | :heavy_check_mark: |
-| Search Stock  | جستجوی سهام  | :heavy_check_mark: |
-| All Stock  | همه نماد های بازار  | :heavy_check_mark: |
-| Chosen Indexes | شاخص های منتخب بورس | :heavy_check_mark: |
-| Effective on Index | تاثیر در شاخص بورس | :heavy_check_mark: |
-| Effective on Index | تاثیر در شاخص فرا بورس | :heavy_check_mark: |
-| Top Transaction Symbol | نماد های پر تراکنش بورس | :heavy_check_mark:
-| Top Transaction Symbol | نماد های پر تراکنش فرا بورس | :heavy_check_mark:
+<table>
+   <thead>
+      <tr>
+         <th>Feature name</th>
+         <th>tsetmc name</th>
+         <th>status</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr> <td>Bourse at Glance</td> <td>بورس اوراق بهادار تهران</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Farabourse at Glance</td> <td>فرابورس ایران</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Search Stock</td> <td>جستجوی سهام</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>All Stocks</td> <td>همه نمادهای مارکت</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Chosen Indexes</td> <td>شاخص های منتخب بورس</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Effective on Index</td> <td>تاثیر در شاخص بورس</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Effective on Index</td> <td>تاثیر در شاخص فرا بورس</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Top Transaction Symbol</td> <td>نماد های پر تراکنش بورس</td> <td>:heavy_check_mark:</td> </tr>
+      <tr> <td>Top Transaction Symbol</td> <td>نماد های پر تراکنش فرا بورس</td> <td>:heavy_check_mark:</td> </tr>
+   </tbody>
+</table>
 
 ### Stock Feature List
-| Feature name  | tsetmc name | status |
-| ------------- | ------------- | ------------- |
-| Brief Information  | در یک نگاه  | :heavy_check_mark: |
-| Stock Transaction History  | سابقه  | :heavy_check_mark: |
-| Announcements  | اطلاعیه ها  | :heavy_check_mark: |
-| Company Identity  | شناسه  | :heavy_check_mark: |
-| Balance Sheet  | ترازنامه  | :heavy_check_mark: |
-| Council Announcement  | آگهی مجمع  | :heavy_check_mark: |
-| Status Change  | تغییر وضعیت  | :heavy_check_mark: |
-| Board of Director  | هئیت مدیره | :heavy_check_mark: |
-| Real Legal  | حقیقی و حقوقی  | :heavy_check_mark: |
-| Stockholder  | سهامداران  | :heavy_check_mark: |
-| EPS  | EPS  | :heavy_check_mark: |
-| DPS  | DPS  | :heavy_check_mark: |
-| Company Info  | معرفی شرکت  | :heavy_check_mark: |
-| Cost Benefit  | سود و زیان  | :heavy_check_mark: |
-| Supervisor Message  | پیام های ناظر  | :heavy_check_mark: |
-| Produce and Sales  | تولید و فروش  | ❌ No, in develop |
-| Council Decision  | تصمیمات مجمع  | ❌ No, in develop |
-| Portfo  | پرتفوی  | ❌ No, in develop |
-| Statistics  | آمار  | ❌ No, in develop |
 
+<table>
+   <thead>
+      <tr>
+         <th>Feature name</th>
+         <th>tsetmc name</th>
+         <th>status</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr> <td>Brief Information</td> <td>در یک نگاه</td> <td>✔</td> </tr>
+      <tr> <td>Stock Transaction History</td> <td>سابقه</td> <td>✔</td> </tr>
+      <tr> <td>Announcements</td> <td>اطلاعیه ها</td><td>✔</td> </tr>
+      <tr> <td>Company Identity</td> <td>شناسه</td><td>✔</td> </tr>
+      <tr> <td>Balance Sheet</td> <td>ترازنامه</td><td>✔</td> </tr>
+      <tr> <td>Council Announcement</td> <td>آگهی مجمع</td><td>✔</td> </tr>
+      <tr> <td>Status Change</td> <td>تغییر وضعیت</td><td>✔</td> </tr>
+      <tr> <td>Board of Director</td> <td>هئیت مدیره</td><td>✔</td> </tr>
+      <tr> <td>Real Legal</td> <td>حقیقی و حقوقی</td><td>✔</td> </tr>
+      <tr> <td>Stockholder</td> <td>سهامداران</td><td>✔</td> </tr>
+      <tr> <td>EPS</td> <td>EPS</td><td>✔</td> </tr>
+      <tr> <td>DPS</td> <td>DPS</td><td>✔</td> </tr>
+      <tr> <td>Company Info</td> <td>معرفی شرکت</td><td>✔</td> </tr>
+      <tr> <td>Cost Benefit</td> <td>سود و زیان</td><td>✔</td> </tr>
+      <tr> <td>Supervisor Message</td> <td>پیام های ناظر</td><td>✔</td> </tr>
+      <tr> <td>Produce and Sales</td> <td>تولید و فروش</td><td>❌ No, in develop</td> </tr>
+      <tr> <td>Council Decision</td> <td>تصمیمات مجمع</td><td>❌ No, in develop</td> </tr>
+      <tr> <td>Portfo</td> <td>پرتفوی</td><td>❌ No, in develop</td> </tr>
+      <tr> <td>Statistics</td> <td>آمار</td><td>❌ No, in develop</td> </tr>
+   </tbody>
+</table>
 
 ## 📌 Examples
    See the [wiki](https://github.com/AFP33/TSE/wiki) page.
