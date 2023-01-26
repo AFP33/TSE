@@ -1,4 +1,4 @@
-# Tehran Securities Exchange (TSE) Library
+# 📈📉📊 Tehran Securities Exchange (TSE) Library
 
 ![love](https://ci.appveyor.com/api/projects/status/32r7s2skrgm9ubva?svg=true)
 [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/chetanraj/awesome-github-badges)
@@ -6,15 +6,18 @@
 
 ## کتابخانه بازار بورس اوراق بهادار تهران
 
-### Introduction
+### 📌 Introduction
 This library developed for fetch all data from [tsetmc.com](http://www.tsetmc.com/) as Tehran Securities Exchange Technology Management Co. It's free and open-source and developed in visual studio C# library. we using [HtmlAgilityPack](https://html-agility-pack.net/) and [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) as library helper. As you probably know, for using this library you need to connect to internet, for accessing tsetmc site.
 
-### How to Use
+### 📝 Documentation 
+The full documentation access in [wiki](https://github.com/AFP33/TSE/wiki). hope it's useful.
+
+### 📌 How to Use
 you have two option for use the library:
 1. Get the project and build it by youself.
 2. Download [*Tse.dll*](https://github.com/AFP33/TSE/releases) in Relase page and reference it in your project
 
-### Features List
+### 📌 Features List
 
 #### Market Feature List
 | Feature name  | tsetmc name | status |
@@ -53,7 +56,7 @@ you have two option for use the library:
 | Statistics  | آمار  | ❌ No, in develop |
 
 
-#### Examples
+#### 📌 Examples
 
 ##### Market Information
 ```cs
@@ -144,9 +147,9 @@ using Tse;
 
 ```
 
-#### Develop
+#### 📌 Develop
 if you want to help in develop, create `branch` and finally send the pull requests.
 
-#### Contact me
+#### 📌 Contact me
 if you have a problem in working with library you can send [`ISSUE'](https://github.com/AFP33/TSE/issues) in issues page.
 otherwise you can reach me with this Telegram ID: [@afp33dev](https://telegram.me/afp33dev)
