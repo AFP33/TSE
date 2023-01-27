@@ -14,41 +14,41 @@ namespace Tse.Entities
         /// <summary>
         /// نماد
         /// </summary>
-        public string Symbol { get; set; }
+        public string Symbol { get; internal set; }
 
         /// <summary>
         /// قیمت پایانی
         /// </summary>
-        public int FinalPrice { get; set; }
+        public int FinalPrice { get; internal set; }
 
         /// <summary>
         /// آخرین معامله
         /// </summary>
-        public int LastTransaction { get; set; }
+        public int LastTransaction { get; internal set; }
 
         /// <summary>
         /// بیشترین
         /// </summary>
-        public int Hight { get; set; }
+        public int Hight { get; internal set; }
 
         /// <summary>
         /// کمترین
         /// </summary>
-        public int Less { get; set; }
+        public int Less { get; internal set; }
 
         /// <summary>
         /// تعداد
         /// </summary>
-        public int Count { get; set; }
+        public int Count { get; internal set; }
 
         /// <summary>
         /// حجم
         /// </summary>
-        public ulong Volume { get; set; }
+        public ulong Volume { get; internal set; }
 
         /// <summary>
         /// ارزش
         /// </summary>
-        public ulong Value { get; set; }
+        public ulong Value { get; internal set; }
     }
 }

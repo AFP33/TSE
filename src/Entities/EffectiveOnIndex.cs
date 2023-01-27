@@ -14,16 +14,16 @@ namespace Tse.Entities
         /// <summary>
         /// نماد
         /// </summary>
-        public string Symbol { get; set; }
+        public string Symbol { get; internal set; }
 
         /// <summary>
         /// قیمت پایانی
         /// </summary>
-        public int FinalPrice { get; set; }
+        public int FinalPrice { get; internal set; }
 
         /// <summary>
         /// تاثیر
         /// </summary>
-        public string Efficacy { get; set; }
+        public string Efficacy { get; internal set; }
     }
 }
