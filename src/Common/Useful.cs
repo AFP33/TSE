@@ -16,18 +16,21 @@ namespace Tse.Common
         /// </summary>
         /// <param name="grogorianDate">grogorian date, it's has 'yyyymmdd' format</param>
         /// <returns>string of persian date</returns>
-        internal static string GregorianDateToPersianDate(string grogorianDate)
+        internal static DateTime? GregorianDateToPersianDate(string grogorianDate)
         {
-            if (grogorianDate.IsEmpty())
-                return "";
+            try
+            {
+                if (grogorianDate.IsEmpty())
+                    return null;
 
-            var parsedDate = DateTime.Parse(grogorianDate.Substring(0, 4) + "-" + grogorianDate.Substring(4, 2) + "-" + grogorianDate.Substring(6, 2));
-            System.Globalization.PersianCalendar persianCalendar = new System.Globalization.PersianCalendar();
-            string year = persianCalendar.GetYear(parsedDate).ToString();
-            string month = persianCalendar.GetMonth(parsedDate).ToString().PadLeft(2, '0');
-            string day = persianCalendar.GetDayOfMonth(parsedDate).ToString().PadLeft(2, '0');
-            string persianDateString = string.Format("{0}/{1}/{2}", year, month, day);
-            return persianDateString;
+                return DateTime.Parse(grogorianDate.Substring(0, 4) + "-"
+                    + grogorianDate.Substring(4, 2) + "-"
+                    + grogorianDate.Substring(6, 2));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         /// <summary>

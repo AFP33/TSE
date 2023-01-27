@@ -1,8 +1,11 @@
-﻿//
+﻿using System;
+
+//
 // Tehran Stock Exchange (TSE) Library Project
 // Developed by AFP33, 2023
 // https://github.com/AFP33
 //
+
 
 namespace Tse.Entities
 {
@@ -14,7 +17,7 @@ namespace Tse.Entities
         /// <summary>
         /// تاریخ معاملات
         /// </summary>
-        public string Date { get; internal set; }
+        public DateTime? Date { get; internal set; }
 
         /// <summary>
         /// معاملات خرید
