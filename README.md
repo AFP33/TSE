@@ -82,7 +82,7 @@ you have two option for use the library:
    See the [wiki](https://github.com/AFP33/TSE/wiki) page.
 
 ## 📌 Develop
-if you want to help in develop, create `branch` and finally send the pull requests.
+if you want to help in develop, create `branch` and finally send the `pull requests`.
 
 ## 📌 Contact me
 if you have a problem in working with the library you can send [`ISSUE`](https://github.com/AFP33/TSE/issues) in issues page.
