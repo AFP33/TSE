@@ -11,9 +11,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class IndustryDeserializer : IDeserializer<Dictionary<string, string>>
+    internal class IndustryDeserializer : IDeserializer<IDictionary<string, string>>
     {
-        public Dictionary<string, string> Get(string serverResponse)
+        public IDictionary<string, string> Get(string serverResponse)
         {
             try
             {

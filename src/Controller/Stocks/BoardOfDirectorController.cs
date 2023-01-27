@@ -12,9 +12,9 @@ using System;
 
 namespace Tse.Controller.Stocks
 {
-    internal class BoardOfDirectorController : IStockController<List<BoardOfDirector>>
+    internal class BoardOfDirectorController : IStockController<IList<BoardOfDirector>>
     {
-        public List<BoardOfDirector> Get(Stock stock)
+        public IList<BoardOfDirector> Get(Stock stock)
         {
             try
             {

@@ -19,36 +19,36 @@ namespace Tse.Entities
         /// <summary>
         /// قیمت پایانی
         /// </summary>
-        public string FinalPrice { get; set; }
+        public int FinalPrice { get; set; }
 
         /// <summary>
         /// آخرین معامله
         /// </summary>
-        public string LastTransaction { get; set; }
+        public int LastTransaction { get; set; }
 
         /// <summary>
         /// بیشترین
         /// </summary>
-        public string Hight { get; set; }
+        public int Hight { get; set; }
 
         /// <summary>
         /// کمترین
         /// </summary>
-        public string Less { get; set; }
+        public int Less { get; set; }
 
         /// <summary>
         /// تعداد
         /// </summary>
-        public string Count { get; set; }
+        public int Count { get; set; }
 
         /// <summary>
         /// حجم
         /// </summary>
-        public string Volume { get; set; }
+        public ulong Volume { get; set; }
 
         /// <summary>
         /// ارزش
         /// </summary>
-        public string Value { get; set; }
+        public ulong Value { get; set; }
     }
 }

@@ -12,9 +12,9 @@ using System;
 
 namespace Tse.Controller.Stocks
 {
-    internal class AnnouncementController : IStockController<List<Announcement>>
+    internal class AnnouncementController : IStockController<IList<Announcement>>
     {
-        public List<Announcement> Get(Stock stock)
+        public IList<Announcement> Get(Stock stock)
         {
             try
             {

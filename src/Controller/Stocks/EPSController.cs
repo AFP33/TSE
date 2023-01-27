@@ -13,7 +13,7 @@ using System;
 
 namespace Tse.Controller.Stocks
 {
-    internal class EPSController : IStockController<List<EPS>>
+    internal class EPSController : IStockController<IList<EPS>>
     {
         private string company12DigitCode { get; set; }
 
@@ -22,7 +22,7 @@ namespace Tse.Controller.Stocks
             this.company12DigitCode = company12DigitCode;
         }
 
-        public List<EPS> Get(Stock stock)
+        public IList<EPS> Get(Stock stock)
         {
             try
             {

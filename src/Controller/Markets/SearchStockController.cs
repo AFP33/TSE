@@ -12,14 +12,14 @@ using System;
 
 namespace Tse.Controller.Markets
 {
-    internal class SearchStockController : IMarketController<List<Stock>>
+    internal class SearchStockController : IMarketController<IList<Stock>>
     {
         private string name { get; set; }
         public SearchStockController(string name)
         {
             this.name = name;
         }
-        public List<Stock> Get()
+        public IList<Stock> Get()
         {
             try
             {

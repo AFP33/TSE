@@ -19,7 +19,7 @@ namespace Tse.Entities
         /// <summary>
         /// مقدار
         /// </summary>
-        public string Value { get; set; }
+        public decimal Value { get; set; }
 
         /// <summary>
         /// تغییر
@@ -34,11 +34,11 @@ namespace Tse.Entities
         /// <summary>
         /// بیشترین
         /// </summary>
-        public string Hight { get; set; }
+        public decimal Hight { get; set; }
 
         /// <summary>
         /// کمترین
         /// </summary>
-        public string Less { get; set; }
+        public decimal Less { get; set; }
     }
 }

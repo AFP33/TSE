@@ -11,9 +11,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class StocksDeserializer : IDeserializer<List<Stock>>
+    internal class StocksDeserializer : IDeserializer<IList<Stock>>
     {
-        public List<Stock> Get(string serverResponse)
+        public IList<Stock> Get(string serverResponse)
         {
             try
             {

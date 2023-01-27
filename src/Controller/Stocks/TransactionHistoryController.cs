@@ -11,7 +11,7 @@ using Tse.Common;
 
 namespace Tse.Controller.Stocks
 {
-    internal class TransactionHistoryController : IStockController<List<TransactionHistory>>
+    internal class TransactionHistoryController : IStockController<IList<TransactionHistory>>
     {
         TransactionHistoryType transactionHistoryType { get; set; }
 
@@ -20,7 +20,7 @@ namespace Tse.Controller.Stocks
             this.transactionHistoryType = transactionHistoryType;
         }
 
-        public List<TransactionHistory> Get(Stock stock)
+        public IList<TransactionHistory> Get(Stock stock)
         {
             try
             {

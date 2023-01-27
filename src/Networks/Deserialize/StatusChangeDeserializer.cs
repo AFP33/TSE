@@ -13,9 +13,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class StatusChangeDeserializer : IDeserializer<List<StatusChange>>
+    internal class StatusChangeDeserializer : IDeserializer<IList<StatusChange>>
     {
-        public List<StatusChange> Get(string serverResponse)
+        public IList<StatusChange> Get(string serverResponse)
         {
             try
             {

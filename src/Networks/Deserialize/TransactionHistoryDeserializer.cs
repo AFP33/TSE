@@ -11,9 +11,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class TransactionHistoryDeserializer : IDeserializer<List<TransactionHistory>>
+    internal class TransactionHistoryDeserializer : IDeserializer<IList<TransactionHistory>>
     {
-        public List<TransactionHistory> Get(string serverResponse)
+        public IList<TransactionHistory> Get(string serverResponse)
         {
             try
             {

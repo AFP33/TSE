@@ -11,9 +11,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class DPSDeserializer : IDeserializer<List<DPS>>
+    internal class DPSDeserializer : IDeserializer<IList<DPS>>
     {
-        public List<DPS> Get(string serverResponse)
+        public IList<DPS> Get(string serverResponse)
         {
             try
             {
@@ -31,10 +31,10 @@ namespace Tse.Networks.Deserialize
                     dPS.PublishDate = dpsRecordItems[0].IsEmpty() ? "" : dpsRecordItems[0];
                     dPS.CouncilDate = dpsRecordItems[1].IsEmpty() ? "" : dpsRecordItems[1];
                     dPS.FiscalYear = dpsRecordItems[2].IsEmpty() ? "" : dpsRecordItems[2];
-                    dPS.ProfitOrLoss = dpsRecordItems[3].IsEmpty() ? "" : dpsRecordItems[3];
-                    dPS.DistributableProfit = dpsRecordItems[4].IsEmpty() ? "" : dpsRecordItems[4];
-                    dPS.AccumulatedProfit = dpsRecordItems[5].IsEmpty() ? "" : dpsRecordItems[5];
-                    dPS.CashProfit = dpsRecordItems[6].IsEmpty() ? "" : dpsRecordItems[6];
+                    dPS.ProfitOrLoss = (dpsRecordItems[3].IsEmpty() ? "" : dpsRecordItems[3]).ToDecimal();
+                    dPS.DistributableProfit = (dpsRecordItems[4].IsEmpty() ? "" : dpsRecordItems[4]).ToDecimal();
+                    dPS.AccumulatedProfit = (dpsRecordItems[5].IsEmpty() ? "" : dpsRecordItems[5]).ToDecimal();
+                    dPS.CashProfit = (dpsRecordItems[6].IsEmpty() ? "" : dpsRecordItems[6]).ToDecimal();
 
                     dPs.Add(dPS);
                 }

@@ -11,9 +11,9 @@ using Tse.Common;
 
 namespace Tse.Controller.Stocks
 {
-    internal class SupervisorMessageController : IStockController<List<SupervisorMessage>>
+    internal class SupervisorMessageController : IStockController<IList<SupervisorMessage>>
     {
-        public List<SupervisorMessage> Get(Stock stock)
+        public IList<SupervisorMessage> Get(Stock stock)
         {
             try
             {

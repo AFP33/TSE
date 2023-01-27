@@ -26,21 +26,21 @@ namespace Tse.Entities
         /// <summary>
         /// سود یا زیان پس از کسر مالیات
         /// </summary>
-        public string ProfitOrLoss { get; internal set; }
+        public decimal ProfitOrLoss { get; internal set; }
 
         /// <summary>
         /// سود قابل تخصیص
         /// </summary>
-        public string DistributableProfit { get; internal set; }
+        public decimal DistributableProfit { get; internal set; }
 
         /// <summary>
         /// سود انباشته پایان دوره
         /// </summary>
-        public string AccumulatedProfit { get; internal set; }
+        public decimal AccumulatedProfit { get; internal set; }
 
         /// <summary>
         /// سود نقدی هر سهم
         /// </summary>
-        public string CashProfit { get; internal set; }
+        public decimal CashProfit { get; internal set; }
     }
 }

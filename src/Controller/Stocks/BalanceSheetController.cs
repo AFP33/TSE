@@ -11,9 +11,9 @@ using Tse.Common;
 
 namespace Tse.Controller.Stocks
 {
-    internal class BalanceSheetController : IStockController<List<BalanceSheet>>
+    internal class BalanceSheetController : IStockController<IList<BalanceSheet>>
     {
-        public List<BalanceSheet> Get(Stock stock)
+        public IList<BalanceSheet> Get(Stock stock)
         {
             try
             {

@@ -62,7 +62,7 @@ namespace Tse.Networks.Deserialize
                     effectiveOnIndexes.Add(new EffectiveOnIndex()
                     {
                         Symbol = fields[0].InnerText,
-                        FinalPrice = fields[1].InnerText,
+                        FinalPrice = fields[1].InnerText.ToInt(),
                         Efficacy = fields[2].InnerText
                     });
                 }

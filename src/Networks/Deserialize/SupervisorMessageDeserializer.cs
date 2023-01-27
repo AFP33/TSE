@@ -13,9 +13,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class SupervisorMessageDeserializer : IDeserializer<List<SupervisorMessage>>
+    internal class SupervisorMessageDeserializer : IDeserializer<IList<SupervisorMessage>>
     {
-        public List<SupervisorMessage> Get(string serverResponse)
+        public IList<SupervisorMessage> Get(string serverResponse)
         {
             try
             {

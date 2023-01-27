@@ -12,9 +12,9 @@ using System;
 
 namespace Tse.Controller.Stocks
 {
-    internal class StatusChangeController : IStockController<List<StatusChange>>
+    internal class StatusChangeController : IStockController<IList<StatusChange>>
     {
-        public List<StatusChange> Get(Stock stock)
+        public IList<StatusChange> Get(Stock stock)
         {
             try
             {

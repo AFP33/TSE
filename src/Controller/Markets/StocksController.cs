@@ -11,9 +11,9 @@ using System;
 
 namespace Tse.Controller.Markets
 {
-    internal class StocksController : IMarketController<List<Stock>>
+    internal class StocksController : IMarketController<IList<Stock>>
     {
-        public List<Stock> Get()
+        public IList<Stock> Get()
         {
             try
             {

@@ -19,7 +19,7 @@ namespace Tse.Entities
         /// <summary>
         /// قیمت پایانی
         /// </summary>
-        public string FinalPrice { get; set; }
+        public int FinalPrice { get; set; }
 
         /// <summary>
         /// تاثیر

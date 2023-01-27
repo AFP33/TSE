@@ -53,11 +53,11 @@ namespace Tse.Networks.Deserialize
                     {
                         Index = fields[0].InnerText,
                         Publish = fields[1].InnerText,
-                        Value = fields[2].InnerText,
+                        Value = fields[2].InnerText.ToDecimal(),
                         Change = fields[3].InnerText,
                         Percent = fields[4].InnerText,
-                        Hight = fields[5].InnerText,
-                        Less = fields[6].InnerText
+                        Hight = fields[5].InnerText.ToDecimal(),
+                        Less = fields[6].InnerText.ToDecimal()
                     };
                     topIndexes.Add(ti);
                 }

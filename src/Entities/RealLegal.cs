@@ -29,7 +29,7 @@ namespace Tse.Entities
         /// <summary>
         /// تغییر مالکیت حقوقی به حقیقی
         /// </summary>
-        public string OwnershipLegalToReal { get; internal set; }
+        public long OwnershipLegalToReal { get; internal set; }
     }
 
     /// <summary>
@@ -69,21 +69,21 @@ namespace Tse.Entities
         /// <summary>
         /// تعداد معاملات
         /// </summary>
-        public string Count { get; internal set; }
+        public int Count { get; internal set; }
 
         /// <summary>
         /// حجم معاملات
         /// </summary>
-        public string Volume { get; internal set; }
+        public ulong Volume { get; internal set; }
 
         /// <summary>
         /// ارزش معاملات
         /// </summary>
-        public string Value { get; internal set; }
+        public decimal Value { get; internal set; }
 
         /// <summary>
         /// قیمت میانگین
         /// </summary>
-        public string AveragePrice { get; internal set; }
+        public decimal AveragePrice { get; internal set; }
     }
 }

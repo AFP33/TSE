@@ -10,9 +10,9 @@ using System;
 
 namespace Tse.Controller.Markets
 {
-    internal class IndustryController : IMarketController<Dictionary<string, string>>
+    internal class IndustryController : IMarketController<IDictionary<string, string>>
     {
-        public Dictionary<string, string> Get()
+        public IDictionary<string, string> Get()
         {
             try
             {

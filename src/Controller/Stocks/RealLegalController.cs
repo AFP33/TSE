@@ -12,14 +12,14 @@ using System;
 
 namespace Tse.Controller.Stocks
 {
-    internal class RealLegalController : IStockController<List<RealLegal>>
+    internal class RealLegalController : IStockController<IList<RealLegal>>
     {
-        public List<RealLegal> Get(Stock stock)
+        public IList<RealLegal> Get(Stock stock)
         {
             try
             {
                 if (stock.TseCode.IsEmpty())
-                    throw new System.ArgumentNullException(nameof(stock));
+                    throw new ArgumentNullException(nameof(stock));
 
                 string url = string.Format(Networks.Address.RealLegal, stock.TseCode);
                 //send Request and get Response

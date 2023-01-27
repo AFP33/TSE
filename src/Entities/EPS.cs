@@ -24,7 +24,7 @@ namespace Tse.Entities
         /// <summary>
         /// پیش بینی
         /// </summary>
-        public string Predict { get; internal set; }
+        public int Predict { get; internal set; }
 
         /// <summary>
         /// رشد
@@ -34,7 +34,7 @@ namespace Tse.Entities
         /// <summary>
         /// واقعی
         /// </summary>
-        public string Real { get; internal set; }
+        public int Real { get; internal set; }
 
         /// <summary>
         /// پوشش
@@ -44,11 +44,11 @@ namespace Tse.Entities
         /// <summary>
         /// سال قبل
         /// </summary>
-        public string LastYear { get; internal set; }
+        public int LastYear { get; internal set; }
 
         /// <summary>
         /// دوره قبل
         /// </summary>
-        public string LastPeriod { get; internal set; }
+        public int LastPeriod { get; internal set; }
     }
 }

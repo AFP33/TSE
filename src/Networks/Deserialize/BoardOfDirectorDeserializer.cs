@@ -12,9 +12,9 @@ using Tse.Common;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class BoardOfDirectorDeserializer : IDeserializer<List<BoardOfDirector>>
+    internal class BoardOfDirectorDeserializer : IDeserializer<IList<BoardOfDirector>>
     {
-        public List<BoardOfDirector> Get(string serverResponse)
+        public IList<BoardOfDirector> Get(string serverResponse)
         {
             try
             {

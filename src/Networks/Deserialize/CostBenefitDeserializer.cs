@@ -13,9 +13,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class CostBenefitDeserializer : IDeserializer<List<CostBenefit>>
+    internal class CostBenefitDeserializer : IDeserializer<IList<CostBenefit>>
     {
-        public List<CostBenefit> Get(string serverResponse)
+        public IList<CostBenefit> Get(string serverResponse)
         {
             try
             {

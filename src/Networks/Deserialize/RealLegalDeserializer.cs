@@ -11,9 +11,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class RealLegalDeserializer : IDeserializer<List<RealLegal>>
+    internal class RealLegalDeserializer : IDeserializer<IList<RealLegal>>
     {
-        public List<RealLegal> Get(string serverResponse)
+        public IList<RealLegal> Get(string serverResponse)
         {
             try
             {
@@ -22,7 +22,7 @@ namespace Tse.Networks.Deserialize
 
                 var realLegals = new List<RealLegal>();
 
-                string[] realLegalItems = serverResponse.Split(';');
+                var realLegalItems = serverResponse.Split(';');
 
                 foreach (var realLegalItem in realLegalItems)
                 {
@@ -32,39 +32,15 @@ namespace Tse.Networks.Deserialize
                         Date = Useful.GregorianDateToPersianDate(items[0]),
                         Buyes = new Buy()
                         {
-                            Legal = new Items()
-                            {
-                                Count = items[2],
-                                Volume = items[6],
-                                Value = items[10],
-                                AveragePrice = CalculateAveragePrice(items[10], items[6]),
-                            },
-                            Real = new Items()
-                            {
-                                Count = items[1],
-                                Volume = items[5],
-                                Value = items[9],
-                                AveragePrice = CalculateAveragePrice(items[9], items[5]),
-                            }
+                            Legal = GetItems(items[2], items[6], items[10]),
+                            Real = GetItems(items[1], items[5], items[9])
                         },
                         Sellers = new Sell()
                         {
-                            Legal = new Items()
-                            {
-                                Count = items[4],
-                                Volume = items[8],
-                                Value = items[12],
-                                AveragePrice = CalculateAveragePrice(items[12], items[8]),
-                            },
-                            Real = new Items()
-                            {
-                                Count = items[3],
-                                Volume = items[7],
-                                Value = items[11],
-                                AveragePrice = CalculateAveragePrice(items[11], items[7]),
-                            }
+                            Legal = GetItems(items[4], items[8], items[12]),
+                            Real = GetItems(items[3], items[7], items[11]),
                         },
-                        OwnershipLegalToReal = CalculateChangeOwnershipToReal(items[8], items[6])
+                        OwnershipLegalToReal = CalculateChangeOwnershipToReal(items[8].ToUlong(), items[6].ToUlong())
                     };
                     realLegals.Add(realLegal);
                 }
@@ -78,20 +54,48 @@ namespace Tse.Networks.Deserialize
             }
         }
 
-        private string CalculateAveragePrice(string value, string volume)
+        private decimal CalculateAveragePrice(decimal value, ulong volume)
         {
-            if (value.IsEmpty() || volume.IsEmpty() || value == "0" || volume == "0")
-                return "";
-
-            return Math.Round((decimal)Convert.ToInt64(value) / Convert.ToInt64(volume), 2).ToString();
+            if (value == 0 || volume == 0)
+                return 0;
+            try
+            {
+                return Math.Round(value / volume, 2);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
-        private string CalculateChangeOwnershipToReal(string sellLegal, string buyLegal)
+        private long CalculateChangeOwnershipToReal(ulong sellLegal, ulong buyLegal)
         {
-            if (sellLegal.IsEmpty() || buyLegal.IsEmpty())
-                return "";
+            try
+            {
+                return (long)(sellLegal - buyLegal);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
 
-            return (Convert.ToInt64(sellLegal) - Convert.ToInt64(buyLegal)).ToString();
+        private Items GetItems(string count, string volume, string value)
+        {
+            try
+            {
+                return new Items()
+                {
+                    Count = count.ToInt(),
+                    Volume = volume.ToUlong(),
+                    Value = value.ToDecimal(),
+                    AveragePrice = CalculateAveragePrice(value.ToDecimal(), volume.ToUlong()),
+                };
+            }
+            catch (Exception)
+            {
+                return new Items();
+            }
         }
     }
 }

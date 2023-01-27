@@ -14,9 +14,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class EPSDeserializer : IDeserializer<List<EPS>>
+    internal class EPSDeserializer : IDeserializer<IList<EPS>>
     {
-        public List<EPS> Get(string serverResponse)
+        public IList<EPS> Get(string serverResponse)
         {
             try
             {
@@ -34,12 +34,12 @@ namespace Tse.Networks.Deserialize
                     EPS eps = new EPS();
                     eps.Date = Regex.Replace(epsItems[i].InnerText, @"\s+", "");
                     eps.PeriodTime = epsItems[i + 1].InnerText;
-                    eps.Predict = epsItems[i + 2].InnerText;
+                    eps.Predict = epsItems[i + 2].InnerText.ToInt();
                     eps.Growth = epsItems[i + 3].InnerText;
-                    eps.Real = epsItems[i + 4].InnerText;
+                    eps.Real = epsItems[i + 4].InnerText.ToInt();
                     eps.Cover = epsItems[i + 5].InnerText;
-                    eps.LastYear = epsItems[i + 6].InnerText;
-                    eps.LastPeriod = epsItems[i + 7].InnerText;
+                    eps.LastYear = epsItems[i + 6].InnerText.ToInt();
+                    eps.LastPeriod = epsItems[i + 7].InnerText.ToInt();
 
                     ePs.Add(eps);
                 }

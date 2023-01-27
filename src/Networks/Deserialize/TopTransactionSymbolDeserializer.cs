@@ -64,13 +64,13 @@ namespace Tse.Networks.Deserialize
                     topTransactionSymbol.Add(new TopTransactionSymbol()
                     {
                         Symbol = fields[0].InnerText,
-                        FinalPrice = fields[1].InnerText,
-                        LastTransaction = fields[3].InnerText,
-                        Hight = fields[6].InnerText,
-                        Less = fields[5].InnerText,
-                        Count = fields[7].InnerText,
-                        Volume = fields[8].Element("div").GetAttributeValue("title", fields[8].InnerText),
-                        Value = fields[9].Element("div").GetAttributeValue("title", fields[9].InnerText),
+                        FinalPrice = fields[1].InnerText.ToInt(),
+                        LastTransaction = fields[3].InnerText.ToInt(),
+                        Hight = fields[6].InnerText.ToInt(),
+                        Less = fields[5].InnerText.ToInt(),
+                        Count = fields[7].InnerText.ToInt(),
+                        Volume = fields[8].Element("div").GetAttributeValue("title", fields[8].InnerText).ToUlong(),
+                        Value = fields[9].Element("div").GetAttributeValue("title", fields[9].InnerText).ToUlong(),
                     });
                 }
 

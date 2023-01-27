@@ -12,9 +12,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    internal class AnnouncementDeserializer : IDeserializer<List<Announcement>>
+    internal class AnnouncementDeserializer : IDeserializer<IList<Announcement>>
     {
-        public List<Announcement> Get(string serverResponse)
+        public IList<Announcement> Get(string serverResponse)
         {
             try
             {

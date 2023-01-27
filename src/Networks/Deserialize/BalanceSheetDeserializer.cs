@@ -13,9 +13,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    public class BalanceSheetDeserializer : IDeserializer<List<BalanceSheet>>
+    public class BalanceSheetDeserializer : IDeserializer<IList<BalanceSheet>>
     {
-        public List<BalanceSheet> Get(string serverResponse)
+        public IList<BalanceSheet> Get(string serverResponse)
         {
             try
             {

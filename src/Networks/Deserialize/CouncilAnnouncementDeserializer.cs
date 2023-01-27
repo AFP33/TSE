@@ -13,9 +13,9 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    public class CouncilAnnouncementDeserializer : IDeserializer<List<CouncilAnnouncement>>
+    public class CouncilAnnouncementDeserializer : IDeserializer<IList<CouncilAnnouncement>>
     {
-        public List<CouncilAnnouncement> Get(string serverResponse)
+        public IList<CouncilAnnouncement> Get(string serverResponse)
         {
             try
             {
