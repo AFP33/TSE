@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
+using Tse.Common;
 using System;
 
 //
@@ -16,7 +17,7 @@ namespace Tse.Networks.Deserialize
         {
             try
             {
-                if (Common.Useful.IsNullString(serverResponse))
+                if (serverResponse.IsEmpty())
                     throw new ArgumentNullException(nameof(serverResponse));
 
                 serverResponse = serverResponse.Remove(0, 12);

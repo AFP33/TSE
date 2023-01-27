@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Tse.Networks.Deserialize;
 using Tse.Entities;
+using Tse.Common;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -23,7 +24,7 @@ namespace Tse.Controller.Stocks
         {
             try
             {
-                if (Common.Useful.IsNullString(stock.TseCode))
+                if (stock.TseCode.IsEmpty())
                     throw new System.ArgumentNullException(nameof(stock));
 
                 string url = GetUrl(stock.TseCode);

@@ -1,4 +1,5 @@
 ﻿using System;
+using Tse.Entities;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -9,14 +10,15 @@
 namespace Tse.Common
 {
     internal class Useful
-    {/// <summary>
-     /// Changging grogorian date to Persian date
-     /// </summary>
-     /// <param name="grogorianDate">grogorian date, it's has 'yyyymmdd' format</param>
-     /// <returns>string of persian date</returns>
+    {
+        /// <summary>
+        /// Changging grogorian date to Persian date
+        /// </summary>
+        /// <param name="grogorianDate">grogorian date, it's has 'yyyymmdd' format</param>
+        /// <returns>string of persian date</returns>
         internal static string GregorianDateToPersianDate(string grogorianDate)
         {
-            if (IsNullString(grogorianDate))
+            if (grogorianDate.IsEmpty())
                 return "";
 
             var parsedDate = DateTime.Parse(grogorianDate.Substring(0, 4) + "-" + grogorianDate.Substring(4, 2) + "-" + grogorianDate.Substring(6, 2));
@@ -28,11 +30,26 @@ namespace Tse.Common
             return persianDateString;
         }
 
-        internal static bool IsNullString(string str)
+        /// <summary>
+        /// Get market status (open or close)
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        internal static MarketStatus GetMarketStatus(string status)
         {
-            if (str == string.Empty || string.IsNullOrEmpty(str) || string.IsNullOrWhiteSpace(str))
-                return true;
-            return false;
+            try
+            {
+                if (status.Contains("بسته"))
+                    return MarketStatus.Close;
+                else if (status.Contains("باز"))
+                    return MarketStatus.Open;
+
+                throw new ArgumentOutOfRangeException(nameof(status));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }

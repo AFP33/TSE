@@ -47,7 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\StringExtensions.cs" />
     <Compile Include="Common\Useful.cs" />
+    <Compile Include="Controller\Markets\ChosenIndexesController.cs" />
+    <Compile Include="Controller\Markets\EffectiveOnIndexController.cs" />
+    <Compile Include="Controller\Markets\TopTransactionSymbolController.cs" />
     <Compile Include="Controller\Stocks\AnnouncementController.cs" />
     <Compile Include="Controller\Stocks\BalanceSheetController.cs" />
     <Compile Include="Controller\Stocks\BoardOfDirectorController.cs" />
@@ -76,11 +80,13 @@
     <Compile Include="Entities\BoardOfDirector.cs" />
     <Compile Include="Entities\Bourse.cs" />
     <Compile Include="Entities\BriefInformation.cs" />
+    <Compile Include="Entities\ChosenIndexes.cs" />
     <Compile Include="Entities\CompanyIdentity.cs" />
     <Compile Include="Entities\CompanyInfo.cs" />
     <Compile Include="Entities\CostBenefit.cs" />
     <Compile Include="Entities\CouncilAnnouncement.cs" />
     <Compile Include="Entities\DPS.cs" />
+    <Compile Include="Entities\EffectiveOnIndex.cs" />
     <Compile Include="Entities\EPS.cs" />
     <Compile Include="Entities\FaraBourse.cs" />
     <Compile Include="Entities\RealLegal.cs" />
@@ -88,7 +94,11 @@
     <Compile Include="Entities\Stock.cs" />
     <Compile Include="Entities\Stockholder.cs" />
     <Compile Include="Entities\SupervisorMessage.cs" />
+    <Compile Include="Entities\TopTransactionSymbol.cs" />
     <Compile Include="Entities\TransactionHistory.cs" />
+    <Compile Include="Handlers\BourseHandler.cs" />
+    <Compile Include="Handlers\FarabourseHandler.cs" />
+    <Compile Include="Handlers\IHandler.cs" />
     <Compile Include="Handlers\MarketHandler.cs" />
     <Compile Include="Handlers\StockHandler.cs" />
     <Compile Include="Networks\Address.cs" />
@@ -97,11 +107,13 @@
     <Compile Include="Networks\Deserialize\BoardOfDirectorDeserializer.cs" />
     <Compile Include="Networks\Deserialize\BourseDeserializer.cs" />
     <Compile Include="Networks\Deserialize\BriefInformationDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\ChosenIndexesDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CompanyIdentityDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CompanyInfoDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CostBenefitDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CouncilAnnouncementDeserializer.cs" />
     <Compile Include="Networks\Deserialize\DPSDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\EffectiveOnIndexDeserializer.cs" />
     <Compile Include="Networks\Deserialize\EPSDeserializer.cs" />
     <Compile Include="Networks\Deserialize\FaraBourseDeserializer.cs" />
     <Compile Include="Networks\Deserialize\IDeserializer.cs" />
@@ -112,6 +124,7 @@
     <Compile Include="Networks\Deserialize\StockholderDeserializer.cs" />
     <Compile Include="Networks\Deserialize\StocksDeserializer.cs" />
     <Compile Include="Networks\Deserialize\SupervisorMessageDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\TopTransactionSymbolDeserializer.cs" />
     <Compile Include="Networks\Deserialize\TransactionHistoryDeserializer.cs" />
     <Compile Include="Networks\Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

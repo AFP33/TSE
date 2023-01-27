@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Tse.Networks.Deserialize;
 using Tse.Entities;
+using Tse.Common;
 using System;
 
 //
@@ -25,8 +26,8 @@ namespace Tse.Controller.Stocks
         {
             try
             {
-                if (Common.Useful.IsNullString(this.company12DigitCode))
-                    throw new System.ArgumentNullException(this.company12DigitCode);
+                if (this.company12DigitCode.IsEmpty())
+                    throw new ArgumentNullException(this.company12DigitCode);
 
                 string url = string.Format(Networks.Address.Stockholder, Regex.Replace(this.company12DigitCode, @"\s+", ""));
                 //send Request and get Response

@@ -2,6 +2,7 @@
 using Newtonsoft.Json.Linq;
 using Tse.Entities;
 using System;
+using Tse.Common;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -17,7 +18,7 @@ namespace Tse.Networks.Deserialize
         {
             try
             {
-                if (Common.Useful.IsNullString(serverResponse))
+                if (serverResponse.IsEmpty())
                     throw new System.ArgumentNullException(nameof(serverResponse));
 
                 var boardOfDirectors = new List<BoardOfDirector>();

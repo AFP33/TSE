@@ -14,7 +14,7 @@ namespace Tse.Handlers
     /// <summary>
     /// دستگیره ای برای دریافت اطلاعات مارکت
     /// </summary>
-    public class MarketHandler
+    public class MarketHandler : IHandler
     {
 
         /// <summary>
@@ -64,42 +64,6 @@ namespace Tse.Handlers
                 try
                 {
                     return new IndustryController().Get();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-            }
-        }
-
-        /// <summary>
-        /// بورس در یک نگاه
-        /// </summary>
-        public Bourse BourseAtGlance
-        {
-            get
-            {
-                try
-                {
-                    return new BourseController().Get();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-            }
-        }
-
-        /// <summary>
-        /// فرابورس در یک نگاه
-        /// </summary>
-        public FaraBourse FaraBourseAtGlance
-        {
-            get
-            {
-                try
-                {
-                    return new FaraBourseController().Get();
                 }
                 catch (Exception)
                 {

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Tse.Networks.Deserialize;
 using Tse.Entities;
+using Tse.Common;
 using System;
 
 //
@@ -17,7 +18,7 @@ namespace Tse.Controller.Stocks
         {
             try
             {
-                if (Common.Useful.IsNullString(stock.TseCode))
+                if (stock.TseCode.IsEmpty())
                     throw new System.ArgumentNullException(nameof(stock));
 
                 string url = string.Format(Networks.Address.RealLegal, stock.TseCode);

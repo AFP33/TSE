@@ -48,5 +48,37 @@ namespace Tse
                 throw;
             }
         }
+
+        /// <summary>
+        /// دریافت یک دستگیره برای کار با اطلاعات مارکت بورس و اوراق بهادار تهران
+        /// </summary>
+        /// <returns></returns>
+        public BourseHandler GetBourseHandler()
+        {
+            try
+            {
+                return new BourseHandler();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// دریافت یک دستگیره برای کار با اطلاعات مارکت فرابورس ایران
+        /// </summary>
+        /// <returns></returns>
+        public FarabourseHandler GetFaraourseHandler()
+        {
+            try
+            {
+                return new FarabourseHandler();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

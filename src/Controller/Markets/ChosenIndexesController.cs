@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Tse.Networks.Deserialize;
 using Tse.Entities;
-using Tse.Common;
 using System;
 
 //
@@ -10,26 +9,23 @@ using System;
 // https://github.com/AFP33
 //
 
-namespace Tse.Controller.Stocks
+namespace Tse.Controller.Markets
 {
-    internal class DPSController : IStockController<List<DPS>>
+    internal class ChosenIndexesController : IMarketController<IList<ChosenIndexes>>
     {
-        public List<DPS> Get(Stock stock)
+        public IList<ChosenIndexes> Get()
         {
             try
             {
-                if (stock.Symbol.IsEmpty())
-                    throw new System.ArgumentNullException(nameof(stock));
-
-                string url = string.Format(Networks.Address.DPS, stock.Symbol);
                 //send Request and get Response
                 var request = new Networks.Request();
-                request.SendRequest(url);
+                request.SendRequest(Networks.Address.Bourse);
+
                 if (request.ResponseStatus != "OK")
                 {
-                    return new List<DPS>();
+                    return new List<ChosenIndexes>();
                 }
-                return new DPSDeserializer().Get(request.ResponseResult);
+                return new ChosenIndexesDeserializer().Get(request.ResponseResult);
             }
             catch (Exception)
             {

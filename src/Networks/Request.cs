@@ -1,6 +1,7 @@
 ﻿using System.Net.Http;
 using System.Net;
 using System.IO;
+using Tse.Common;
 using System;
 
 //
@@ -29,7 +30,7 @@ namespace Tse.Networks
         {
             try
             {
-                if (Common.Useful.IsNullString(url) || !IsHttpUrl(url))
+                if (url.IsEmpty() || !IsHttpUrl(url))
                     throw new HttpRequestException("URL not valid");
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);

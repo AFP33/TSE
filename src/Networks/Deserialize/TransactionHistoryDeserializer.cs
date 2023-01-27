@@ -17,7 +17,7 @@ namespace Tse.Networks.Deserialize
         {
             try
             {
-                if (Common.Useful.IsNullString(serverResponse))
+                if (serverResponse.IsEmpty())
                     throw new System.ArgumentNullException(nameof(serverResponse));
 
                 List<TransactionHistory> transactionHistories = new List<TransactionHistory>();

@@ -1,4 +1,5 @@
 ﻿using Tse.Entities;
+using Tse.Common;
 using System;
 
 //
@@ -15,8 +16,8 @@ namespace Tse.Networks.Deserialize
         {
             try
             {
-                if (Common.Useful.IsNullString(serverResponse))
-                    throw new System.ArgumentNullException(nameof(serverResponse));
+                if (serverResponse.IsEmpty())
+                    throw new ArgumentNullException(nameof(serverResponse));
 
                 var splitted = serverResponse.Split(',');
                 var briefInfo = new BriefInformation()

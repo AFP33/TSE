@@ -11,7 +11,7 @@ using System;
 
 namespace Tse.Handlers
 {
-    public class StockHandler
+    public class StockHandler : IHandler
     {
         private Stock stock { get; set; }
 

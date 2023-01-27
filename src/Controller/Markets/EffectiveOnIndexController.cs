@@ -1,8 +1,13 @@
 ﻿using System.Collections.Generic;
 using Tse.Networks.Deserialize;
 using Tse.Entities;
-using Tse.Common;
 using System;
+
+//
+// Tehran Stock Exchange (TSE) Library Project
+// Developed by AFP33, 2023
+// https://github.com/AFP33
+//
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -12,31 +17,28 @@ using System;
 
 namespace Tse.Controller.Markets
 {
-    internal class SearchStockController : IMarketController<List<Stock>>
+    internal class EffectiveOnIndexController : IMarketController<IList<EffectiveOnIndex>>
     {
-        private string name { get; set; }
-        public SearchStockController(string name)
+        private string _market { get; set; }
+
+        public EffectiveOnIndexController(string market = "Bourse")
         {
-            this.name = name;
+            _market = market;
         }
-        public List<Stock> Get()
+
+        public IList<EffectiveOnIndex> Get()
         {
             try
             {
-                if (this.name.IsEmpty())
-                    throw new ArgumentNullException(nameof(this.name));
-
-                string url = string.Format(Networks.Address.SearchStocks, this.name);
-
                 //send Request and get Response
                 var request = new Networks.Request();
-                request.SendRequest(url);
+                request.SendRequest(Networks.Address.Bourse);
 
                 if (request.ResponseStatus != "OK")
                 {
-                    return new List<Stock>();
+                    return new List<EffectiveOnIndex>();
                 }
-                return new SearchStockDeserializer().Get(request.ResponseResult);
+                return new EffectiveOnIndexDeserializer(_market).Get(request.ResponseResult);
             }
             catch (Exception)
             {

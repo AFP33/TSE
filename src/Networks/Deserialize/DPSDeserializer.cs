@@ -17,8 +17,8 @@ namespace Tse.Networks.Deserialize
         {
             try
             {
-                if (Common.Useful.IsNullString(serverResponse))
-                    throw new System.ArgumentNullException(nameof(serverResponse));
+                if (serverResponse.IsEmpty())
+                    throw new ArgumentNullException(nameof(serverResponse));
 
                 List<DPS> dPs = new List<DPS>();
 
@@ -28,13 +28,13 @@ namespace Tse.Networks.Deserialize
                 {
                     DPS dPS = new DPS();
                     var dpsRecordItems = item.Split('@');
-                    dPS.PublishDate = Useful.IsNullString(dpsRecordItems[0]) ? "" : dpsRecordItems[0];
-                    dPS.CouncilDate = Useful.IsNullString(dpsRecordItems[1]) ? "" : dpsRecordItems[1];
-                    dPS.FiscalYear = Useful.IsNullString(dpsRecordItems[2]) ? "" : dpsRecordItems[2];
-                    dPS.ProfitOrLoss = Useful.IsNullString(dpsRecordItems[3]) ? "" : dpsRecordItems[3];
-                    dPS.DistributableProfit = Useful.IsNullString(dpsRecordItems[4]) ? "" : dpsRecordItems[4];
-                    dPS.AccumulatedProfit = Useful.IsNullString(dpsRecordItems[5]) ? "" : dpsRecordItems[5];
-                    dPS.CashProfit = Useful.IsNullString(dpsRecordItems[6]) ? "" : dpsRecordItems[6];
+                    dPS.PublishDate = dpsRecordItems[0].IsEmpty() ? "" : dpsRecordItems[0];
+                    dPS.CouncilDate = dpsRecordItems[1].IsEmpty() ? "" : dpsRecordItems[1];
+                    dPS.FiscalYear = dpsRecordItems[2].IsEmpty() ? "" : dpsRecordItems[2];
+                    dPS.ProfitOrLoss = dpsRecordItems[3].IsEmpty() ? "" : dpsRecordItems[3];
+                    dPS.DistributableProfit = dpsRecordItems[4].IsEmpty() ? "" : dpsRecordItems[4];
+                    dPS.AccumulatedProfit = dpsRecordItems[5].IsEmpty() ? "" : dpsRecordItems[5];
+                    dPS.CashProfit = dpsRecordItems[6].IsEmpty() ? "" : dpsRecordItems[6];
 
                     dPs.Add(dPS);
                 }

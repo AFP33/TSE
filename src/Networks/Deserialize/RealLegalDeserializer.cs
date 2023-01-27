@@ -17,8 +17,8 @@ namespace Tse.Networks.Deserialize
         {
             try
             {
-                if (Common.Useful.IsNullString(serverResponse))
-                    throw new System.ArgumentNullException(nameof(serverResponse));
+                if (serverResponse.IsEmpty())
+                    throw new ArgumentNullException(nameof(serverResponse));
 
                 var realLegals = new List<RealLegal>();
 
@@ -80,7 +80,7 @@ namespace Tse.Networks.Deserialize
 
         private string CalculateAveragePrice(string value, string volume)
         {
-            if (Useful.IsNullString(value) || Useful.IsNullString(volume) || value == "0" || volume == "0")
+            if (value.IsEmpty() || volume.IsEmpty() || value == "0" || volume == "0")
                 return "";
 
             return Math.Round((decimal)Convert.ToInt64(value) / Convert.ToInt64(volume), 2).ToString();
@@ -88,7 +88,7 @@ namespace Tse.Networks.Deserialize
 
         private string CalculateChangeOwnershipToReal(string sellLegal, string buyLegal)
         {
-            if (Useful.IsNullString(sellLegal) || Useful.IsNullString(buyLegal))
+            if (sellLegal.IsEmpty() || buyLegal.IsEmpty())
                 return "";
 
             return (Convert.ToInt64(sellLegal) - Convert.ToInt64(buyLegal)).ToString();
