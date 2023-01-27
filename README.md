@@ -18,8 +18,8 @@ The full documentation access in [wiki](https://github.com/AFP33/TSE/wiki). hope
 
 ## 📌 How to Use
 you have two option for use the library:
-1. Get the project and build it by youself.
-2. Download [*Tse.dll*](https://github.com/AFP33/TSE/releases) in Relase page and reference it in your project
+1. Get the project and build it by youself. [*how to?*](https://github.com/AFP33/TSE/wiki/2.-How-to-build-Project)
+2. Download [*Tse.dll*](https://github.com/AFP33/TSE/releases) in Relase page and reference it in your project. [*how to?*](https://github.com/AFP33/TSE/wiki/3.-How-to-add-the-Tse.dll-to-project)
 
 ## 📌 Features List
 
