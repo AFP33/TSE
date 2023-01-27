@@ -6,7 +6,7 @@
 
 namespace Tse.Handlers
 {
-    public interface IHandler
+    internal interface IHandler
     {
     }
 }

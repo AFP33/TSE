@@ -13,7 +13,7 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    public class CouncilAnnouncementDeserializer : IDeserializer<IList<CouncilAnnouncement>>
+    internal class CouncilAnnouncementDeserializer : IDeserializer<IList<CouncilAnnouncement>>
     {
         public IList<CouncilAnnouncement> Get(string serverResponse)
         {

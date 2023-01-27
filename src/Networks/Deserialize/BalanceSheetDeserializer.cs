@@ -13,7 +13,7 @@ using System;
 
 namespace Tse.Networks.Deserialize
 {
-    public class BalanceSheetDeserializer : IDeserializer<IList<BalanceSheet>>
+    internal class BalanceSheetDeserializer : IDeserializer<IList<BalanceSheet>>
     {
         public IList<BalanceSheet> Get(string serverResponse)
         {
