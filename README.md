@@ -4,7 +4,7 @@
 [![Made With Love](https://img.shields.io/badge/Made%20With-Love-orange.svg)](https://github.com/chetanraj/awesome-github-badges)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://github.com/AFP33/TSE/blob/master/LICENSE)
 
-## کتابخانه بازار بورس اوراق بهادار تهران
+### کتابخانه بازار بورس اوراق بهادار تهران (نسخه فارسی را از [اینجا](/READMEPERSIAN.md) بخوانید)
 
 ## 📌 Introduction
 This library developed for fetch all data from [tsetmc.com](http://www.tsetmc.com/) as Tehran Securities Exchange Technology Management Co. It's free and open-source and developed in visual studio C# library. we using [HtmlAgilityPack](https://html-agility-pack.net/) and [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json) as library helper. As you probably know, for using this library you need to connect to internet, for accessing tsetmc site.
