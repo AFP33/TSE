@@ -85,5 +85,5 @@ you have two option for use the library:
 if you want to help in develop, create `branch` and finally send the pull requests.
 
 ## 📌 Contact me
-if you have a problem in working with the library you can send [`ISSUE'](https://github.com/AFP33/TSE/issues) in issues page.
+if you have a problem in working with the library you can send [`ISSUE`](https://github.com/AFP33/TSE/issues) in issues page.
 otherwise you can reach me with this Telegram ID: [@afp33dev](https://telegram.me/afp33dev)
