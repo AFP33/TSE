@@ -304,5 +304,23 @@ namespace Tse.Handlers
                 }
             }
         }
+
+        /// <summary>
+        /// آمارها
+        /// </summary>
+        public Statistics Statistics
+        {
+            get
+            {
+                try
+                {
+                    return new StatisticsController().Get(stock);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
     }
 }
