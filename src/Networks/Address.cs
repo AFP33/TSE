@@ -34,6 +34,7 @@ namespace Tse.Networks
         internal readonly static string SupervisorMessage = @"http://www.tsetmc.com/Loader.aspx?Partree=15131W&i={0}";
         internal readonly static string Statistics = @"http://www.tsetmc.com/tsev2/data/instValue.aspx?i={0}&t=i";
         internal readonly static string CouncilDecision = @"http://tsetmc.com/tsev2/data/CodalContent.aspx?s={0}&r=14";
+        internal readonly static string TransactionDetails = @"http://cdn.tsetmc.com/api/Trade/GetTradeHistory/{0}/{1}/true";
 
     }
 }

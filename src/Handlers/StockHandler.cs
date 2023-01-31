@@ -39,6 +39,57 @@ namespace Tse.Handlers
         }
 
         /// <summary>
+        /// دریافت ریز معاملات براساس معامله روز
+        /// </summary>
+        /// <param name="transactionHistory">روز مد نظر</param>
+        /// <returns></returns>
+        public IList<TransactionDetails> GetTransactionDetails(TransactionHistory transactionHistory)
+        {
+            try
+            {
+                return new TransactionDetailsController(transactionHistory).Get(stock);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// دریافت ریز معاملات براساس یک تاریخ میلادی
+        /// </summary>
+        /// <param name="specificDate">تاریخ باید به میلادی باشد</param>
+        /// <returns></returns>
+        public IList<TransactionDetails> GetTransactionDetails(DateTime specificDate)
+        {
+            try
+            {
+                return new TransactionDetailsController(specificDate).Get(stock);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// دریاتف ریز معاملات براساس یک تاریخ شمسی
+        /// </summary>
+        /// <param name="persianDate">تاریخ باید به شمسی باشد</param>
+        /// <returns></returns>
+        public IList<TransactionDetails> GetTransactionDetails(string persianDate)
+        {
+            try
+            {
+                return new TransactionDetailsController(persianDate).Get(stock);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
         /// دریافت اطلاعات اولیه
         /// </summary>
         public BriefInformation BriefInformations

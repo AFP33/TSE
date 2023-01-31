@@ -77,6 +77,7 @@
     <Compile Include="Controller\Markets\StocksController.cs" />
     <Compile Include="Controller\Stocks\StockQueueController.cs" />
     <Compile Include="Controller\Stocks\SupervisorMessageController.cs" />
+    <Compile Include="Controller\Stocks\TransactionDetailsController.cs" />
     <Compile Include="Controller\Stocks\TransactionHistoryController.cs" />
     <Compile Include="Entities\Announcement.cs" />
     <Compile Include="Entities\BalanceSheet.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Entities\StockQueue.cs" />
     <Compile Include="Entities\SupervisorMessage.cs" />
     <Compile Include="Entities\TopTransactionSymbol.cs" />
+    <Compile Include="Entities\TransactionDetails.cs" />
     <Compile Include="Entities\TransactionHistory.cs" />
     <Compile Include="Handlers\BourseHandler.cs" />
     <Compile Include="Handlers\FarabourseHandler.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Networks\Deserialize\StocksDeserializer.cs" />
     <Compile Include="Networks\Deserialize\SupervisorMessageDeserializer.cs" />
     <Compile Include="Networks\Deserialize\TopTransactionSymbolDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\TransactionDetailsDeserializer.cs" />
     <Compile Include="Networks\Deserialize\TransactionHistoryDeserializer.cs" />
     <Compile Include="Networks\Request.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
