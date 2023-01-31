@@ -57,6 +57,24 @@ namespace Tse.Handlers
         }
 
         /// <summary>
+        /// تابلو معاملات.
+        /// سفارشهایی مانند "معتبر تا لغو" و یا "معتبر تا تاریخ" در سیستم ثبت میشود اما چون در برخی موارد در بازه مجاز قیمتی نیستند قابلیت انجام ندارند، با پارامتر ورودی میتواند این مسائل را مدیریت کنید.
+        /// </summary>
+        /// <param name="queueStatus">اگر مقدار Clean انتخاب شود، سفارشهایی که در محدوده مجاز روز نباشند در لیست قرار نخواهند گرفت، و انتخاب Full نمایش همه سفارشات فارغ از بازه معتبر را شامل میشود.</param>
+        /// <returns></returns>
+        public StockQueue StockQueue(QueueStatus queueStatus = QueueStatus.Full)
+        {
+            try
+            {
+                return new StockQueueController(queueStatus).Get(stock);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
         /// دریافت اطلاعیه ها
         /// </summary>
         /// <returns></returns>

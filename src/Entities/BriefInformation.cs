@@ -54,7 +54,14 @@ namespace Tse.Entities
 
     public class Range
     {
-        public int Low { get; set; }
-        public int High { get; set; }
+        /// <summary>
+        /// حد پایین
+        /// </summary>
+        public int Low { get; internal set; }
+
+        /// <summary>
+        /// حد بالا
+        /// </summary>
+        public int High { get; internal set; }
     }
 }
