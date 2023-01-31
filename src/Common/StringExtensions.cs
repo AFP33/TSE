@@ -27,11 +27,15 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency">currency in style like: 999,999,999</param>
         /// <returns>return like 999999999</returns>
-        internal static string RemoveCurrencyStyle(this string currency)
+        internal static string RemoveStyle(this string currency)
         {
             try
             {
-                return currency.Replace(",", string.Empty);
+                return currency
+                    .Replace(",", string.Empty)
+                    .Replace(" ", string.Empty)
+                    .Replace("(", string.Empty)
+                    .Replace(")", string.Empty);
             }
             catch (Exception)
             {
@@ -50,7 +54,7 @@ namespace Tse.Common
             {
                 if (currency.IsEmpty())
                     return 0;
-                currency = currency.RemoveCurrencyStyle();
+                currency = currency.RemoveStyle();
                 return Convert.ToDecimal(currency);
             }
             catch (Exception)
@@ -70,7 +74,7 @@ namespace Tse.Common
             {
                 if (currency.IsEmpty())
                     return 0;
-                currency = currency.RemoveCurrencyStyle();
+                currency = currency.RemoveStyle();
                 return Convert.ToUInt64(currency);
             }
             catch (Exception)
@@ -90,7 +94,7 @@ namespace Tse.Common
             {
                 if (currency.IsEmpty())
                     return 0;
-                currency = currency.RemoveCurrencyStyle();
+                currency = currency.RemoveStyle();
                 return Convert.ToDouble(currency);
             }
             catch (Exception)
@@ -110,7 +114,7 @@ namespace Tse.Common
             {
                 if (currency.IsEmpty())
                     return 0;
-                currency = currency.RemoveCurrencyStyle();
+                currency = currency.RemoveStyle();
                 return Convert.ToInt32(currency);
             }
             catch (Exception)

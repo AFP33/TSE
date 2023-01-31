@@ -61,6 +61,7 @@
     <Compile Include="Controller\Stocks\CompanyInfoController.cs" />
     <Compile Include="Controller\Stocks\CostBenefitController.cs" />
     <Compile Include="Controller\Stocks\CouncilAnnouncementController.cs" />
+    <Compile Include="Controller\Stocks\CouncilDecisionController.cs" />
     <Compile Include="Controller\Stocks\DPSController.cs" />
     <Compile Include="Controller\Stocks\EPSController.cs" />
     <Compile Include="Controller\Markets\FaraBourseController.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Entities\CompanyInfo.cs" />
     <Compile Include="Entities\CostBenefit.cs" />
     <Compile Include="Entities\CouncilAnnouncement.cs" />
+    <Compile Include="Entities\CouncilDecision.cs" />
     <Compile Include="Entities\DPS.cs" />
     <Compile Include="Entities\EffectiveOnIndex.cs" />
     <Compile Include="Entities\EPS.cs" />
@@ -114,6 +116,7 @@
     <Compile Include="Networks\Deserialize\CompanyInfoDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CostBenefitDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CouncilAnnouncementDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\CouncilDecisionDeserializer.cs" />
     <Compile Include="Networks\Deserialize\DPSDeserializer.cs" />
     <Compile Include="Networks\Deserialize\EffectiveOnIndexDeserializer.cs" />
     <Compile Include="Networks\Deserialize\EPSDeserializer.cs" />

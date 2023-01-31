@@ -322,5 +322,23 @@ namespace Tse.Handlers
                 }
             }
         }
+
+        /// <summary>
+        /// تصمیمات مجمع
+        /// </summary>
+        public IList<CouncilDecision> CouncilDecisions
+        {
+            get
+            {
+                try
+                {
+                    return new CouncilDecisionController().Get(stock);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

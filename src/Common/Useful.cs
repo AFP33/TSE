@@ -1,5 +1,6 @@
-﻿using System;
+﻿using System.Globalization;
 using Tse.Entities;
+using System;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -26,6 +27,46 @@ namespace Tse.Common
                 return DateTime.Parse(grogorianDate.Substring(0, 4) + "-"
                     + grogorianDate.Substring(4, 2) + "-"
                     + grogorianDate.Substring(6, 2));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// get DateTime from persian date
+        /// </summary>
+        /// <param name="persianDate">must has format like 1401/11/30</param>
+        /// <returns></returns>
+        internal static DateTime? GetDateTimeFromPersianDate(string persianDate)
+        {
+            try
+            {
+                if (persianDate.IsEmpty())
+                    return null;
+
+                persianDate = persianDate.RemoveStyle();
+                CultureInfo persianCulture = new CultureInfo("fa-IR");
+                return DateTime.ParseExact(persianDate,
+                    "yyyy/MM/dd", persianCulture);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// string time span to TimeSpan
+        /// </summary>
+        /// <param name="timeSpan">should be like: 08:00</param>
+        /// <returns></returns>
+        internal static TimeSpan? ToTimeSpan(string timeSpan)
+        {
+            try
+            {
+                return TimeSpan.Parse(timeSpan.RemoveStyle());
             }
             catch (Exception)
             {
