@@ -72,9 +72,9 @@ you have two option for use the library:
       <tr> <td>Cost Benefit</td> <td>سود و زیان</td><td>✔</td> </tr>
       <tr> <td>Supervisor Message</td> <td>پیام های ناظر</td><td>✔</td> </tr>
       <tr> <td>Produce and Sales</td> <td>تولید و فروش</td><td>❌ No, in develop</td> </tr>
-      <tr> <td>Council Decision</td> <td>تصمیمات مجمع</td><td>❌ No, in develop</td> </tr>
-      <tr> <td>Portfo</td> <td>پرتفوی</td><td>❌ No, in develop</td> </tr>
-      <tr> <td>Statistics</td> <td>آمار</td><td>❌ No, in develop</td> </tr>
+      <tr> <td>Council Decision</td> <td>تصمیمات مجمع</td><td>✔</td> </tr>
+      <tr> <td>Portfo</td> <td>پرتفوی</td><td>✔</td> </tr>
+      <tr> <td>Statistics</td> <td>آمار</td><td>✔</td> </tr>
    </tbody>
 </table>
 
