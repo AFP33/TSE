@@ -28,48 +28,33 @@ namespace Tse.Handlers
             {
                 return new SearchStockController(name).Get();
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت لیست همه نمادهای بازار
         /// </summary>
         /// <returns></returns>
-        public IList<Stock> Stocks
+        public IList<Stock> Stocks()
         {
-            get
+            try
             {
-                try
-                {
-                    return new StocksController().Get();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new StocksController().Get();
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت لیست همه صنایع موجود
         /// </summary>
         /// <returns>کلید آی آن صنعت، و مقدار نام آن صنعت می باشد</returns>
-        public IDictionary<string, string> Industries 
-        { 
-            get 
+        public IDictionary<string, string> Industries()
+        {
+            try
             {
-                try
-                {
-                    return new IndustryController().Get();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new IndustryController().Get();
             }
+            catch (Exception) { throw; }
         }
     }
 }

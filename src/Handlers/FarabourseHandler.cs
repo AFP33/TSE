@@ -17,57 +17,37 @@ namespace Tse.Handlers
         /// <summary>
         /// فرابورس در یک نگاه
         /// </summary>
-        public FaraBourse FaraBourseAtGlance
+        public FaraBourse FaraBourseAtGlance()
         {
-            get
+            try
             {
-                try
-                {
-                    return new FaraBourseController().Get();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new FaraBourseController().Get();
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت نماد های موثر شاخص بورس
         /// </summary>
-        public IList<EffectiveOnIndex> EffectiveOnIndex
+        public IList<EffectiveOnIndex> EffectiveOnIndex()
         {
-            get
+            try
             {
-                try
-                {
-                    return new EffectiveOnIndexController("Farabourse").Get();
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                return new EffectiveOnIndexController("Farabourse").Get();
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت نمادهای پر تراکنش مارکت بورس
         /// </summary>
-        public IList<TopTransactionSymbol> TopTransactionSymbol
+        public IList<TopTransactionSymbol> TopTransactionSymbol()
         {
-            get
+            try
             {
-                try
-                {
-                    return new TopTransactionSymbolController("Farabourse").Get();
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                return new TopTransactionSymbolController("Farabourse").Get();
             }
+            catch (Exception) { throw; }
         }
     }
 }

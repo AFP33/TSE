@@ -17,76 +17,49 @@ namespace Tse.Handlers
         /// <summary>
         /// بورس در یک نگاه
         /// </summary>
-        public Bourse BourseAtGlance
+        public Bourse BourseAtGlance()
         {
-            get
+            try
             {
-                try
-                {
-                    return new BourseController().Get();
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new BourseController().Get();
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت نماد های موثر شاخص بورس
         /// </summary>
-        public IList<EffectiveOnIndex> EffectiveOnIndex
+        public IList<EffectiveOnIndex> EffectiveOnIndex()
         {
-            get
+            try
             {
-                try
-                {
-                    return new EffectiveOnIndexController().Get();
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                return new EffectiveOnIndexController().Get();
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت نمادهای پر تراکنش مارکت بورس
         /// </summary>
-        public IList<TopTransactionSymbol> TopTransactionSymbol
+        public IList<TopTransactionSymbol> TopTransactionSymbol()
         {
-            get
+            try
             {
-                try
-                {
-                    return new TopTransactionSymbolController().Get();
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                return new TopTransactionSymbolController().Get();
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت نمادهای پر تراکنش مارکت بورس
         /// </summary>
-        public IList<ChosenIndexes> ChosenIndexes
+        public IList<ChosenIndexes> ChosenIndexes()
         {
-            get
+            try
             {
-                try
-                {
-                    return new ChosenIndexesController().Get();
-                }
-                catch (Exception)
-                {
-
-                    throw;
-                }
+                return new ChosenIndexesController().Get();
             }
+            catch (Exception) { throw; }
         }
     }
 }

@@ -32,10 +32,7 @@ namespace Tse.Handlers
             {
                 return new TransactionHistoryController(transactionHistoryType).Get(stock);
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
@@ -49,10 +46,7 @@ namespace Tse.Handlers
             {
                 return new TransactionDetailsController(transactionHistory).Get(stock);
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
@@ -66,10 +60,7 @@ namespace Tse.Handlers
             {
                 return new TransactionDetailsController(specificDate).Get(stock);
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
@@ -83,28 +74,19 @@ namespace Tse.Handlers
             {
                 return new TransactionDetailsController(persianDate).Get(stock);
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعات اولیه
         /// </summary>
-        public BriefInformation BriefInformations
+        public BriefInformation BriefInformations()
         {
-            get
+            try
             {
-                try
-                {
-                    return new BriefInformationController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new BriefInformationController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
@@ -119,313 +101,214 @@ namespace Tse.Handlers
             {
                 return new StockQueueController(queueStatus).Get(stock);
             }
-            catch (Exception)
-            {
-                throw;
-            }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعیه ها
         /// </summary>
         /// <returns></returns>
-        public IList<Announcement> Announcements
+        public IList<Announcement> Announcements()
         {
-            get
+            try
             {
-                try
-                {
-                    return new AnnouncementController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new AnnouncementController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعات شناسه نماد
         /// </summary>
         /// <returns></returns>
-        public CompanyIdentity CompanyIdentities
+        public CompanyIdentity CompanyIdentities()
         {
-            get
+            try
             {
-                try
-                {
-                    return new CompanyIdentityController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new CompanyIdentityController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت ترازنامه ها
         /// </summary>
         /// <returns></returns>
-        public IList<BalanceSheet> BalanceSheets
+        public IList<BalanceSheet> BalanceSheets()
         {
-            get
+            try
             {
-                try
-                {
-                    return new BalanceSheetController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new BalanceSheetController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت آگهی های مجمع
         /// </summary>
         /// <returns></returns>
-        public IList<CouncilAnnouncement> CouncilAnnouncements
+        public IList<CouncilAnnouncement> CouncilAnnouncements()
         {
-            get
+            try
             {
-                try
-                {
-                    return new CouncilAnnouncementController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new CouncilAnnouncementController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت تغییرات وضعیت نماد
         /// </summary>
         /// <returns></returns>
-        public IList<StatusChange> StatusChanges
+        public IList<StatusChange> StatusChanges()
         {
-            get
+            try
             {
-                try
-                {
-                    return new StatusChangeController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new StatusChangeController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعات هیئت مدیره
         /// </summary>
         /// <returns></returns>
-        public IList<BoardOfDirector> BoardOfDirectors
+        public IList<BoardOfDirector> BoardOfDirectors()
         {
-            get
+            try
             {
-                try
-                {
-                    return new BoardOfDirectorController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new BoardOfDirectorController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// معاملات حقیقی و حقوقی
         /// </summary>
         /// <returns></returns>
-        public IList<RealLegal> RealLegals
+        public IList<RealLegal> RealLegals()
         {
-            get
+            try
             {
-                try
-                {
-                    return new RealLegalController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new RealLegalController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعات سهامداران
         /// </summary>
         /// <returns></returns>
-        public IList<Stockholder> Stockholders
+        public IList<Stockholder> Stockholders()
         {
-            get
+            try
             {
-                try
-                {
-                    var companyIdentity = this.CompanyIdentities;
-                    return new StockholderController(companyIdentity.Company12DigitCode).Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                var companyIdentity = this.CompanyIdentities();
+                return new StockholderController(companyIdentity.Company12DigitCode).Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعات مربوط به EPS
         /// </summary>
         /// <returns></returns>
-        public IList<EPS> EPSs
+        public IList<EPS> EPSs()
         {
-            get
+            try
             {
-                try
-                {
-                    var companyIdentity = this.CompanyIdentities;
-                    return new EPSController(companyIdentity.Company12DigitCode).Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                var companyIdentity = this.CompanyIdentities();
+                return new EPSController(companyIdentity.Company12DigitCode).Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت اطلاعات مربوط به DPS
         /// </summary>
         /// <returns></returns>
-        public IList<DPS> DPSs
+        public IList<DPS> DPSs()
         {
-            get
+            try
             {
-                try
-                {
-                    return new DPSController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new DPSController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// اطلاعات مربوط به معرفی شرکت
         /// </summary>
         /// <returns></returns>
-        public CompanyInfo CompanyInfos
+        public CompanyInfo CompanyInfos()
         {
-            get
+            try
             {
-                try
-                {
-                    return new CompanyInfoController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new CompanyInfoController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// اطلاعات سود و زیان
         /// </summary>
         /// <returns></returns>
-        public IList<CostBenefit> CostBenefits
+        public IList<CostBenefit> CostBenefits()
         {
-            get
+            try
             {
-                try
-                {
-                    return new CostBenefitController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new CostBenefitController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// دریافت پیام های ناظر
         /// </summary>
         /// <returns></returns>
-        public IList<SupervisorMessage> SupervisorMessages
+        public IList<SupervisorMessage> SupervisorMessages()
         {
-            get
+            try
             {
-                try
-                {
-                    return new SupervisorMessageController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new SupervisorMessageController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// آمارها
         /// </summary>
-        public Statistics Statistics
+        public Statistics Statistics()
         {
-            get
+            try
             {
-                try
-                {
-                    return new StatisticsController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new StatisticsController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// تصمیمات مجمع
         /// </summary>
-        public IList<CouncilDecision> CouncilDecisions
+        public IList<CouncilDecision> CouncilDecisions()
         {
-            get
+            try
             {
-                try
-                {
-                    return new CouncilDecisionController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new CouncilDecisionController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
 
         /// <summary>
         /// پورتفوی شرکت
         /// </summary>
-        public Portfo Portfo
+        public Portfo Portfo()
         {
-            get
+            try
             {
-                try
-                {
-                    return new PortfoController().Get(stock);
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
+                return new PortfoController().Get(stock);
             }
+            catch (Exception) { throw; }
         }
     }
 }
