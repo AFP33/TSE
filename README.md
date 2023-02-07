@@ -58,6 +58,7 @@ you have two option for use the library:
    <tbody>
       <tr> <td>Brief Information</td> <td>در یک نگاه</td> <td>✔</td> </tr>
       <tr> <td>Stock Transaction History</td> <td>سابقه</td> <td>✔</td> </tr>
+      <tr> <td>Stock Queue</td> <td>تابلو معاملات</td> <td>✔</td> </tr>
       <tr> <td>Announcements</td> <td>اطلاعیه ها</td><td>✔</td> </tr>
       <tr> <td>Company Identity</td> <td>شناسه</td><td>✔</td> </tr>
       <tr> <td>Balance Sheet</td> <td>ترازنامه</td><td>✔</td> </tr>
