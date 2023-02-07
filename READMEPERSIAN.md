@@ -59,6 +59,7 @@
    <tbody>
       <tr> <td>Brief Information</td> <td>در یک نگاه</td> <td>✔</td> </tr>
       <tr> <td>Stock Transaction History</td> <td>سابقه</td> <td>✔</td> </tr>
+      <tr> <td>Stock Queue</td> <td>تابلو معاملات</td> <td>✔</td> </tr>
       <tr> <td>Announcements</td> <td>اطلاعیه ها</td><td>✔</td> </tr>
       <tr> <td>Company Identity</td> <td>شناسه</td><td>✔</td> </tr>
       <tr> <td>Balance Sheet</td> <td>ترازنامه</td><td>✔</td> </tr>
@@ -73,17 +74,17 @@
       <tr> <td>Cost Benefit</td> <td>سود و زیان</td><td>✔</td> </tr>
       <tr> <td>Supervisor Message</td> <td>پیام های ناظر</td><td>✔</td> </tr>
       <tr> <td>Produce and Sales</td> <td>تولید و فروش</td><td>❌ No, in develop</td> </tr>
-      <tr> <td>Council Decision</td> <td>تصمیمات مجمع</td><td>❌ No, in develop</td> </tr>
-      <tr> <td>Portfo</td> <td>پرتفوی</td><td>❌ No, in develop</td> </tr>
-      <tr> <td>Statistics</td> <td>آمار</td><td>❌ No, in develop</td> </tr>
+      <tr> <td>Council Decision</td> <td>تصمیمات مجمع</td><td>✔</td> </tr>
+      <tr> <td>Portfo</td> <td>پرتفوی</td><td>✔</td> </tr>
+      <tr> <td>Statistics</td> <td>آمار</td><td>✔</td> </tr>
    </tbody>
 </table>
 
 ## مثال ها
-اگر به بخش [مستندات](https://github.com/AFP33/TSE/wiki) مراجعه کنید برای تمام ویژگی های موجود در کتابخانه مثال هایی در دسترس است.
+اگر به بخش [مستندات](https://github.com/AFP33/TSE/wiki/7.-Working-with-Stock-Handler) مراجعه کنید برای تمام ویژگی های موجود در کتابخانه مثال هایی در دسترس است.
 
 ## کمک به توسعه کتابخانه
 در صورتی که مایل به همکاری در توسعه این کتابخانه هستید، کافی است یک Branch جدید بسازید و در نهایت توسعه خودتان را به صورت یک Pull Request ارسال کنید.
 
 ## تماس با من
-اگر مشکلی در کار با کتابخانه دارید، لطفاً از بخش [`Issueها`](https://github.com/AFP33/TSE/issues)، مشکل خودتان را مطرح کنید. در غیر اینصورت، میتوانید از لینک تلگرام به آدرس [@afp33dev](https://telegram.me/afp33dev) با بنده در ارتباط باشید
+اگر مشکلی در کار با کتابخانه دارید، لطفاً از بخش [`Issue`](https://github.com/AFP33/TSE/issues)، مشکل خودتان را مطرح کنید. در غیر اینصورت، میتوانید از لینک تلگرام به آدرس [@afp33dev](https://telegram.me/afp33dev) با بنده در ارتباط باشید
