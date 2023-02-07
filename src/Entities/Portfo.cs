@@ -272,12 +272,39 @@ namespace Tse.Entities
 
     public class PortfoBasicInfo
     {
+        /// <summary>
+        /// عنوان
+        /// </summary>
         public string Title { get; internal set; }
+
+        /// <summary>
+        /// تاریخ انتشار
+        /// </summary>
         public DateTime? Publish { get; internal set; }
+
+        /// <summary>
+        /// نام گزارش
+        /// </summary>
         public string ReportName { get; internal set; }
+
+        /// <summary>
+        /// انتهای سال مالی
+        /// </summary>
         public DateTime? YearEndToDate { get; internal set; }
+
+        /// <summary>
+        /// دوره
+        /// </summary>
         public string Period { get; internal set; }
+
+        /// <summary>
+        /// وضعیت حسابرسی
+        /// </summary>
         public bool IsAudited { get; internal set; }
+
+        /// <summary>
+        /// انتهای دوره
+        /// </summary>
         public DateTime? PeriodEndToDate { get; internal set; }
     }
 }
