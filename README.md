@@ -79,7 +79,7 @@ you have two option for use the library:
 </table>
 
 ## 📌 Examples
-   See the [wiki](https://github.com/AFP33/TSE/wiki) page.
+   See the [wiki](https://github.com/AFP33/TSE/wiki/7.-Working-with-Stock-Handler) page.
 
 ## 📌 Develop
 if you want to help in develop, create `branch` and finally send the `pull requests`.
