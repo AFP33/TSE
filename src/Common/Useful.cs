@@ -58,6 +58,26 @@ namespace Tse.Common
         }
 
         /// <summary>
+        /// convert persian date time to DateTime
+        /// </summary>
+        /// <param name="persianDate">persian date has format like: "96/09/10 12:12"</param>
+        /// <returns></returns>
+        internal static DateTime? GetDateTimeFromPersianDateTime(string persianDate)
+        {
+            try
+            {
+                if (persianDate.IsEmpty())
+                    return null;
+
+                return Convert.ToDateTime(persianDate, new CultureInfo("fa-IR"));
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// string time span to TimeSpan
         /// </summary>
         /// <param name="timeSpan">should be like: 08:00</param>
@@ -94,6 +114,21 @@ namespace Tse.Common
             {
                 throw;
             }
+        }
+
+        /// <summary>
+        /// Get Audit string value to boolean
+        /// </summary>
+        /// <param name="audit">audit string value</param>
+        /// <returns></returns>
+        internal static bool GetAuditStatus(string audit)
+        {
+            if (audit == "(حسابرسی نشده)")
+                return false;
+            else if (audit == "(حسابرسی شده)")
+                return true;
+
+            return false;
         }
     }
 }

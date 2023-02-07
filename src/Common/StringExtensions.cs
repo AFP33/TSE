@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -55,6 +57,7 @@ namespace Tse.Common
                 if (currency.IsEmpty())
                     return 0;
                 currency = currency.RemoveStyle();
+                currency = currency.PersianToEnglish();
                 return Convert.ToDecimal(currency);
             }
             catch (Exception)
@@ -75,7 +78,32 @@ namespace Tse.Common
                 if (currency.IsEmpty())
                     return 0;
                 currency = currency.RemoveStyle();
+                currency = currency.PersianToEnglish();
                 return Convert.ToUInt64(currency);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// converte string to long
+        /// </summary>
+        /// <param name="currency"></param>
+        /// <returns></returns>
+        internal static long ToLong(this string currency)
+        {
+            try
+            {
+                if (currency.IsEmpty())
+                    return 0;
+                var negetiveStatus = currency.IsNegetive();
+                currency = currency.RemoveStyle();
+                currency = currency.PersianToEnglish();
+                if (negetiveStatus)
+                    return Convert.ToInt64(currency) * -1;
+                return Convert.ToInt64(currency);
             }
             catch (Exception)
             {
@@ -95,6 +123,7 @@ namespace Tse.Common
                 if (currency.IsEmpty())
                     return 0;
                 currency = currency.RemoveStyle();
+                currency = currency.PersianToEnglish();
                 return Convert.ToDouble(currency);
             }
             catch (Exception)
@@ -114,12 +143,61 @@ namespace Tse.Common
             {
                 if (currency.IsEmpty())
                     return 0;
+                var negetiveStatus = currency.IsNegetive();
                 currency = currency.RemoveStyle();
+                currency = currency.PersianToEnglish();
+                if (negetiveStatus)
+                    return Convert.ToInt32(currency) * -1;
                 return Convert.ToInt32(currency);
             }
             catch (Exception)
             {
                 return 0;
+            }
+        }
+
+        /// <summary>
+        /// Persian number format to english number format
+        /// </summary>
+        /// <param name="persianStr">Persian number format</param>
+        /// <returns></returns>
+        internal static string PersianToEnglish(this string persianStr)
+        {
+            Dictionary<char, char> LettersDictionary = new Dictionary<char, char>
+            {
+                ['۰'] = '0',
+                ['۱'] = '1',
+                ['۲'] = '2',
+                ['۳'] = '3',
+                ['۴'] = '4',
+                ['۵'] = '5',
+                ['۶'] = '6',
+                ['۷'] = '7',
+                ['۸'] = '8',
+                ['۹'] = '9'
+            };
+            foreach (var item in persianStr)
+                persianStr = persianStr.Replace(item, LettersDictionary[item]);
+            return persianStr;
+        }
+
+        /// <summary>
+        /// Checking if number is negetive number
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
+        internal static bool IsNegetive(this string number)
+        {
+            try
+            {
+                if (number.Contains('(') && number.Contains(')'))
+                    return true;
+
+                return false;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }

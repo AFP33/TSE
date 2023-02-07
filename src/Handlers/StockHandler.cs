@@ -409,5 +409,23 @@ namespace Tse.Handlers
                 }
             }
         }
+
+        /// <summary>
+        /// پورتفوی شرکت
+        /// </summary>
+        public Portfo Portfo
+        {
+            get
+            {
+                try
+                {
+                    return new PortfoController().Get(stock);
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

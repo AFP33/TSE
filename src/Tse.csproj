@@ -69,6 +69,7 @@
     <Compile Include="Controller\IMarketController.cs" />
     <Compile Include="Controller\Markets\IndustryController.cs" />
     <Compile Include="Controller\IStockController.cs" />
+    <Compile Include="Controller\Stocks\PortfoController.cs" />
     <Compile Include="Controller\Stocks\RealLegalController.cs" />
     <Compile Include="Controller\Stocks\StatisticsController.cs" />
     <Compile Include="Controller\Stocks\StatusChangeController.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Entities\EffectiveOnIndex.cs" />
     <Compile Include="Entities\EPS.cs" />
     <Compile Include="Entities\FaraBourse.cs" />
+    <Compile Include="Entities\Portfo.cs" />
     <Compile Include="Entities\RealLegal.cs" />
     <Compile Include="Entities\Statistics.cs" />
     <Compile Include="Entities\StatusChange.cs" />
@@ -127,6 +129,7 @@
     <Compile Include="Networks\Deserialize\FaraBourseDeserializer.cs" />
     <Compile Include="Networks\Deserialize\IDeserializer.cs" />
     <Compile Include="Networks\Deserialize\IndustryDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\PortfoDeserializer.cs" />
     <Compile Include="Networks\Deserialize\RealLegalDeserializer.cs" />
     <Compile Include="Networks\Deserialize\SearchStockDeserializer.cs" />
     <Compile Include="Networks\Deserialize\StatisticsDeserializer.cs" />
