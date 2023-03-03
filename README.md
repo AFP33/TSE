@@ -79,6 +79,8 @@ you have two option for use the library:
    </tbody>
 </table>
 
+The `Produce and Sales` feature (تولید و فروش) is deactivated in `tsetmc` site.
+
 ## 📌 Examples
    See the [wiki](https://github.com/AFP33/TSE/wiki/7.-Working-with-Stock-Handler) page.
 
