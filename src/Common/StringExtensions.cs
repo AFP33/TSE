@@ -159,33 +159,73 @@ namespace Tse.Common
         /// <summary>
         /// Persian number format to english number format
         /// </summary>
-        /// <param name="persianStr">Persian number format</param>
+        /// <param name="data">Persian number format</param>
         /// <returns></returns>
-        internal static string PersianToEnglish(this string persianStr)
+        internal static string PersianToEnglish(this string data)
         {
-            try
+            if (data is null)
             {
-                Dictionary<char, char> LettersDictionary = new Dictionary<char, char>
+                return string.Empty;
+            }
+
+            var dataChars = data.ToCharArray();
+            for (var i = 0; i < dataChars.Length; i++)
+            {
+                switch (dataChars[i])
                 {
-                    ['۰'] = '0',
-                    ['۱'] = '1',
-                    ['۲'] = '2',
-                    ['۳'] = '3',
-                    ['۴'] = '4',
-                    ['۵'] = '5',
-                    ['۶'] = '6',
-                    ['۷'] = '7',
-                    ['۸'] = '8',
-                    ['۹'] = '9'
-                };
-                foreach (var item in persianStr)
-                    persianStr = persianStr.Replace(item, LettersDictionary[item]);
-                return persianStr;
+                    case '\u06F0':
+                    case '\u0660':
+                        dataChars[i] = '0';
+                        break;
+
+                    case '\u06F1':
+                    case '\u0661':
+                        dataChars[i] = '1';
+                        break;
+
+                    case '\u06F2':
+                    case '\u0662':
+                        dataChars[i] = '2';
+                        break;
+
+                    case '\u06F3':
+                    case '\u0663':
+                        dataChars[i] = '3';
+                        break;
+
+                    case '\u06F4':
+                    case '\u0664':
+                        dataChars[i] = '4';
+                        break;
+
+                    case '\u06F5':
+                    case '\u0665':
+                        dataChars[i] = '5';
+                        break;
+
+                    case '\u06F6':
+                    case '\u0666':
+                        dataChars[i] = '6';
+                        break;
+
+                    case '\u06F7':
+                    case '\u0667':
+                        dataChars[i] = '7';
+                        break;
+
+                    case '\u06F8':
+                    case '\u0668':
+                        dataChars[i] = '8';
+                        break;
+
+                    case '\u06F9':
+                    case '\u0669':
+                        dataChars[i] = '9';
+                        break;
+                }
             }
-            catch (Exception)
-            {
-                return persianStr;
-            }
+
+            return new string(dataChars);
         }
 
         /// <summary>
