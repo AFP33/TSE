@@ -84,8 +84,14 @@ The `Produce and Sales` feature (تولید و فروش) is deactivated in `tset
 ## 📌 Examples
    See the [wiki](https://github.com/AFP33/TSE/wiki/7.-Working-with-Stock-Handler) page.
 
-## 📌 Develop
-if you want to help in develop, create `branch` and finally send the `pull requests`.
+## 📌 Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request
+
+See the list of [contributors](https://github.com/AFP33/TSE/contributors) who participated in this project.
 
 ## 📌 Contact me
 if you have a problem in working with the library you can send [`ISSUE`](https://github.com/AFP33/TSE/issues) in issues page.
