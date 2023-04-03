@@ -50,6 +50,16 @@ namespace Tse.Entities
         /// بازه روز
         /// </summary>
         public Range TodayRange { get; internal set; }
+
+        /// <summary>
+        /// معاملات حقیقی ها
+        /// </summary>
+        public CurrentDayTransactionDetails RealsTransaction { get; internal set; }
+
+        /// <summary>
+        /// معاملات حقوقی ها
+        /// </summary>
+        public CurrentDayTransactionDetails LegalTransaction { get; internal set; }
     }
 
     public class Range
@@ -63,5 +73,32 @@ namespace Tse.Entities
         /// حد بالا
         /// </summary>
         public int High { get; internal set; }
+    }
+
+    /// <summary>
+    /// جزئیات معاملات
+    /// حقیقی - حقوقی
+    /// </summary>
+    public class CurrentDayTransactionDetails
+    {
+        /// <summary>
+        /// تعداد خریداران
+        /// </summary>
+        public int BuyerCount { get; internal set; }
+
+        /// <summary>
+        /// حجم معاملات خرید
+        /// </summary>
+        public long BuyerVolume { get; internal set; }
+
+        /// <summary>
+        /// تعداد فروشندگان
+        /// </summary>
+        public int SellerCount { get; internal set; }
+
+        /// <summary>
+        /// حجم معاملات فروش
+        /// </summary>
+        public long SellerVolume { get; internal set; }
     }
 }

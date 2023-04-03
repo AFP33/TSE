@@ -123,6 +123,7 @@
     <Compile Include="Networks\Deserialize\CostBenefitDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CouncilAnnouncementDeserializer.cs" />
     <Compile Include="Networks\Deserialize\CouncilDecisionDeserializer.cs" />
+    <Compile Include="Networks\Deserialize\CurrentDayTransactionDetailsDeserializer.cs" />
     <Compile Include="Networks\Deserialize\DPSDeserializer.cs" />
     <Compile Include="Networks\Deserialize\EffectiveOnIndexDeserializer.cs" />
     <Compile Include="Networks\Deserialize\EPSDeserializer.cs" />

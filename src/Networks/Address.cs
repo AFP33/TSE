@@ -23,6 +23,7 @@ namespace Tse.Networks
         internal readonly static string StatusChange = @"http://www.tsetmc.com/Loader.aspx?Partree=15131L&i={0}";
         internal readonly static string BoardOfDirector = @"http://www.tsetmc.com/tsev2/data/CodalContent.aspx?s={0}&r=12";
         internal readonly static string RealLegal = @"http://www.tsetmc.com/tsev2/data/clienttype.aspx?i={0}";
+        internal readonly static string RealLegalLive = @"http://www.tsetmc.com/tsev2/data/ClientTypeAll.aspx";
         internal readonly static string Stockholder = @"http://www.tsetmc.com/Loader.aspx?Partree=15131T&c={0}";
         internal readonly static string EPS = @"http://www.tsetmc.com/Loader.aspx?Partree=15131U&c={0}";
         internal readonly static string DPS = @"http://www.tsetmc.com/tsev2/data/DPSData.aspx?s={0}";

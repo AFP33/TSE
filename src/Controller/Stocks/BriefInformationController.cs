@@ -2,6 +2,7 @@
 using Tse.Entities;
 using Tse.Common;
 using System;
+using System.Security.Policy;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -26,7 +27,34 @@ namespace Tse.Controller.Stocks
                 if (request.ResponseStatus != "OK")
                     return new BriefInformation();
 
-                return new BriefInformationDeserializer().Get(request.ResponseResult);
+                var briefInfo = new BriefInformationDeserializer().Get(request.ResponseResult);
+                var transactionDetails = GetCurrentDayTransactionDetails(stock);
+                if (transactionDetails == null)
+                    return briefInfo;
+
+                if (transactionDetails.Item1 != null)
+                    briefInfo.RealsTransaction =  transactionDetails.Item1;
+                if (transactionDetails.Item2 != null)
+                    briefInfo.LegalTransaction = transactionDetails.Item2;
+
+                return briefInfo;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private Tuple<CurrentDayTransactionDetails, CurrentDayTransactionDetails> GetCurrentDayTransactionDetails(Stock stock)
+        {
+            try
+            {
+                var request = new Networks.Request();
+                request.SendRequest(Networks.Address.RealLegalLive);
+                if (request.ResponseStatus != "OK")
+                    return null;
+
+                return new CurrentDayTransactionDetailsDeserializer(stock).Get(request.ResponseResult);
             }
             catch (Exception)
             {
