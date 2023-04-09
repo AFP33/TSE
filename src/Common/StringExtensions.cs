@@ -10,14 +10,14 @@ using System;
 
 namespace Tse.Common
 {
-    internal static class StringExtensions
+    public static class StringExtensions
     {
         /// <summary>
         /// checking if string is null, whitespace, or empty
         /// </summary>
         /// <param name="str">input</param>
         /// <returns></returns>
-        internal static bool IsEmpty(this string str)
+        public static bool IsEmpty(this string str)
         {
             if (str == string.Empty || string.IsNullOrEmpty(str) || string.IsNullOrWhiteSpace(str))
                 return true;
@@ -29,7 +29,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency">currency in style like: 999,999,999</param>
         /// <returns>return like 999999999</returns>
-        internal static string RemoveStyle(this string currency)
+        public static string RemoveStyle(this string currency)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency"></param>
         /// <returns></returns>
-        internal static decimal ToDecimal(this string currency)
+        public static decimal ToDecimal(this string currency)
         {
             try
             {
@@ -71,7 +71,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency"></param>
         /// <returns></returns>
-        internal static ulong ToUlong(this string currency)
+        public static ulong ToUlong(this string currency)
         {
             try
             {
@@ -92,7 +92,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency"></param>
         /// <returns></returns>
-        internal static long ToLong(this string currency)
+        public static long ToLong(this string currency)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency"></param>
         /// <returns></returns>
-        internal static double ToDouble(this string currency)
+        public static double ToDouble(this string currency)
         {
             try
             {
@@ -137,7 +137,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="currency"></param>
         /// <returns></returns>
-        internal static int ToInt(this string currency)
+        public static int ToInt(this string currency)
         {
             try
             {
@@ -161,7 +161,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="data">Persian number format</param>
         /// <returns></returns>
-        internal static string PersianToEnglish(this string data)
+        public static string PersianToEnglish(this string data)
         {
             if (data is null)
             {
@@ -233,7 +233,7 @@ namespace Tse.Common
         /// </summary>
         /// <param name="number"></param>
         /// <returns></returns>
-        internal static bool IsNegetive(this string number)
+        public static bool IsNegetive(this string number)
         {
             try
             {

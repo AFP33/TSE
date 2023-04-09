@@ -2,6 +2,10 @@
 using Tse.Controller.Markets;
 using Tse.Entities;
 using System;
+using System.Linq;
+using Tse.Common;
+using System.Threading.Tasks;
+using System.Collections;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -35,11 +39,49 @@ namespace Tse.Handlers
         /// دریافت لیست همه نمادهای بازار
         /// </summary>
         /// <returns></returns>
-        public IList<Stock> Stocks()
+        public IList<Stock> Stocks(BondType bondType = BondType.All)
         {
             try
             {
-                return new StocksController().Get();
+                var stocks = new StocksController().Get();
+                switch (bondType)
+                {
+                    case BondType.All:
+                        return stocks;
+                    case BondType.Saham:
+                        return stocks
+                            .Where(x => x.OtherData[17] == "1")
+                            .ToList();
+                    case BondType.Farabourse_Payeh:
+                        return stocks
+                            .Where(x => x.OtherData[17] == "4")
+                            .ToList();
+                    case BondType.Farabourse_First_Second:
+                        return stocks
+                            .Where(x => x.OtherData[17] == "2")
+                            .Where(x => x.Industry.Id != 69)
+                            .Where(x => x.Industry.Id != 68)
+                            .Where(x => x.Industry.Id != 59)
+                            .ToList();
+                    case BondType.TshilatMaskan:
+                        return stocks.Where(x => x.Industry.Id == 59).ToList();
+                    case BondType.HaghTaghadom:
+                        return stocks
+                            .Where(x => x.Symbol.EndsWith("ح"))
+                            .ToList();
+                    case BondType.OraghBedehi:
+                        return stocks.Where(x => x.Industry.Id == 69).ToList();
+                    case BondType.EkhtiarMoameleh:
+                        return stocks.Where(x => x.OtherData[17] == "3").ToList();
+                    case BondType.Ati: // ERRRO
+                        return null;
+                    case BondType.SandoghSarmayegozari:
+                        return stocks.Where(x => x.Industry.Id == 68).ToList();
+                    case BondType.Kala:
+                        return stocks.Where(x => x.OtherData[17] == "7").ToList();
+                    default:
+                        return stocks;
+                }
             }
             catch (Exception) { throw; }
         }

@@ -2,6 +2,8 @@
 using Tse.Entities;
 using System.Linq;
 using System;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
+using Tse.Common;
 
 //
 // Tehran Stock Exchange (TSE) Library Project
@@ -27,12 +29,15 @@ namespace Tse.Networks.Deserialize
                         var items = stocksRecords[i].Split(',');
                         var stock = new Stock()
                         {
-                            Id = Convert.ToInt32(items[18]),
                             Name = items[3],
                             Symbol = items[2],
                             TseCode = items[0],
                             OtherData = items,
-
+                            Industry = new Industry() 
+                            {
+                                Id = Convert.ToInt32(items[18]),
+                                Title = items[18].ParseEnum<IndustryType>().GetDescription()
+                            }
                         };
                         stocks.Add(stock);
                     }
