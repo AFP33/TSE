@@ -107,6 +107,9 @@ namespace Tse.Entities
         [Description("زراعت و خدمات وابسته")]
         Zeraat = 01,
 
+        [Description("جنگلداري و ماهيگيري")]
+        Jangali = 02,
+
         [Description("استخراج زغال سنگ")]
         ZoghalSang = 10,
 
@@ -116,8 +119,17 @@ namespace Tse.Entities
         [Description("استخراج كانه هاي فلزي")]
         KanehFelezi = 13,
 
+        [Description("استخراج ساير معادن")]
+        SayerMaaden = 14,
+
+        [Description("حذف شده- فرآورده‌هاي غذايي و آشاميدني")]
+        Ghazaei_deleted = 15,
+
         [Description("منسوجات")]
         Mansojat = 17,
+
+        [Description("دباغي، پرداخت چرم و ساخت انواع پاپوش")]
+        Dabaghi = 19,
 
         [Description("محصولات چوبي")]
         Chobi = 20,
@@ -130,6 +142,9 @@ namespace Tse.Entities
 
         [Description("فراورده هاي نفتي، كك و سوخت هسته اي")]
         Nafti = 23,
+
+        [Description("حذف شده-مواد و محصولات شيميايي")]
+        Shimiaei_deleted = 24,
 
         [Description("لاستيك و پلاستيك")]
         Lastik = 25,
@@ -152,11 +167,17 @@ namespace Tse.Entities
         [Description("ساخت دستگاه‌ها و وسايل ارتباطي")]
         DastgahErtebatat = 32,
 
+        [Description("ابزارپزشکي، اپتيکي و اندازه‌گيري")]
+        AbzarPezeshki = 33,
+
         [Description("خودرو و ساخت قطعات")]
         Khodroei = 34,
 
         [Description("ساير تجهيزات حمل و نقل")]
         SayerTajhizatHaml = 35,
+
+        [Description("مبلمان و مصنوعات ديگر")]
+        Mobli = 36,
 
         [Description("قند و شكر")]
         Ghandi = 38,
@@ -166,6 +187,9 @@ namespace Tse.Entities
 
         [Description("عرضه برق، گاز، بخاروآب گرم")]
         ArzeBargGaz = 40,
+
+        [Description("جمع آوري، تصفيه و توزيع آب")]
+        JamavariAb = 41,
 
         [Description("محصولات غذايي و آشاميدني به جز قند و شكر")]
         Ghazaei = 42,
@@ -191,6 +215,12 @@ namespace Tse.Entities
 
         [Description("تجارت عمده وخرده فروشي وسائط نقليه موتور")]
         TejaratOmdehMotori = 50,
+
+        [Description("حمل و نقل هوايي")]
+        HamlonaghlHavaei = 51,
+
+        [Description("انبارداري و حمايت از فعاليتهاي حمل و نقل")]
+        AnbardariHamlonaghl = 52,
 
         [Description("سيمان، آهك و گچ")]
         Simani = 53,
@@ -218,6 +248,9 @@ namespace Tse.Entities
 
         [Description("حمل و نقل آبي")]
         HamloNaghlAbi = 61,
+
+        [Description("فعاليت هاي پشتيباني و كمكي حمل و نقل")]
+        PoshtibaniHamlonaghl = 63,
 
         [Description("مخابرات")]
         Mokhaberat = 64,
@@ -252,10 +285,22 @@ namespace Tse.Entities
         [Description("خدمات فنی و مهندسی")]
         FaniMohandesi = 74,
 
+        [Description("اوراق بهادار مبتني بر دارايي فكري")]
+        BondFekri = 76,
+
+        [Description("فعالبت هاي اجاره و ليزينگ")]
+        Lizing = 77,
+
+        [Description("فعاليت پشتيباني اجرائي اداري وحمايت كسب")]
+        PoshtibaniEjraei = 82,
+
         [Description("فعاليت هاي هنري، سرگرمي و خلاقانه")]
         Honari = 90,
 
         [Description("فعاليتهاي فرهنگي و ورزشي")]
         FarhangiVarzeshi = 93,
+
+        [Description("گروه اوراق غيرفعال")]
+        BondDisabled = 98,
     }
 }
